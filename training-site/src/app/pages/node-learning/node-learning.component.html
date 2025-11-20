@@ -1,0 +1,58 @@
+<div class="container-xxl">
+  <h1 class="h2 fw-bold mb-3">Node.js Training – Learn Node.js From Zero</h1>
+  <p class="lead">Run JavaScript on the server, build APIs, and connect to databases.</p>
+
+  <section class="row g-3 my-2">
+    <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
+      <h3 class="h6 fw-semibold">What is Node.js?</h3>
+      <p class="small mb-0">A runtime for executing JS on the server, built on V8.</p>
+    </div></div></div>
+    <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
+      <h3 class="h6 fw-semibold">NPM & Packages</h3>
+      <p class="small mb-0">Install and manage dependencies via <code>npm</code> or <code>pnpm</code>.</p>
+    </div></div></div>
+    <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
+      <h3 class="h6 fw-semibold">APIs & Express.js</h3>
+      <p class="small mb-0">Express is a minimal web framework to handle HTTP routes and middleware.</p>
+    </div></div></div>
+    <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
+      <h3 class="h6 fw-semibold">Real‑World Use</h3>
+      <p class="small mb-0">Build REST APIs, handle auth, process forms, connect MongoDB.</p>
+    </div></div></div>
+  </section>
+
+  <section class="container pb-5">
+    <h2 class="h4 mb-3">Interactive Playground</h2>
+    <app-playground kind="node"></app-playground>
+  </section>
+
+  <section class="my-4">
+    <h2 class="h5 fw-semibold">Node.js Interview Questions (Beginner)</h2>
+    <ul class="small">
+      <li>What is Node.js event loop? - Handles async callbacks non‑blocking.</li>
+      <li>What is Express middleware? - Functions that can modify request/response.</li>
+      <li>How do you create a route? - <code>app.get('/path', handler)</code>.</li>
+      <li>What is REST? - Architectural style for stateless APIs using HTTP verbs.</li>
+      <li>How to manage env config? - <code>process.env</code>, dotenv, config libraries.</li>
+      <li>How to connect MongoDB? - Using official driver or Mongoose.</li>
+      <li>What are status codes? - 2xx success, 4xx client errors, 5xx server errors.</li>
+      <li>What is package.json? - Project metadata and scripts/dependencies.</li>
+    </ul>
+  </section>
+
+  <section class="my-4">
+    <h2 class="h5 fw-semibold">Videos</h2>
+    <div class="row g-3">
+      <div class="col-md-6" *ngFor="let v of videos">
+        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+          <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+        </div>
+        <p class="small mt-2 mb-0">{{ v.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="my-4">
+    <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary">Visit my YouTube channel</a>
+  </div>
+</div>

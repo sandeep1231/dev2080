@@ -1,0 +1,75 @@
+<section class="hero text-center py-5">
+  <h1 class="display-5 fw-bold mb-3">Angular, Node.js & MongoDB Training</h1>
+  <p class="lead mb-4">Industry‑oriented, project‑based MEAN stack learning for students, freshers & working professionals.</p>
+  <div class="d-flex justify-content-center gap-3">
+    <a routerLink="/contact" class="btn btn-primary btn-lg">Join Next Batch</a>
+    <a routerLink="/angular" class="btn btn-outline-secondary btn-lg">Free Learning Content</a>
+  </div>
+</section>
+
+<section class="trainer my-5">
+  <div class="row g-4 align-items-center">
+    <div class="col-md-5">
+      <div class="p-4 bg-white shadow-sm rounded-3 h-100">
+        <h2 class="h4 fw-semibold">Your Mentor</h2>
+        <p class="mb-2">Senior Full‑Stack Developer with real product & interview experience.</p>
+        <ul class="small mb-0 list-unstyled">
+          <li>• Hands‑on coding sessions</li>
+          <li>• Real project workflows</li>
+          <li>• Interview preparation & doubt support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="row g-3">
+        <div class="col-sm-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Angular</h3>
+              <p class="small mb-0">Build dynamic, component driven frontends with TypeScript.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Node.js</h3>
+              <p class="small mb-0">Create scalable REST APIs & backend services.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">MongoDB</h3>
+              <p class="small mb-0">Fast NoSQL persistence for modern web apps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="curriculum my-5">
+  <h2 class="h4 fw-semibold mb-3">High‑Level Curriculum Snapshot</h2>
+  <div class="row g-3">
+    <div class="col-sm-6 col-lg-4" *ngFor="let item of ['Web basics','Angular fundamentals','API development with Node','Database with MongoDB','Full‑stack mini project'];">
+      <div class="p-3 bg-white shadow-sm rounded-3 small fw-medium">{{ item }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-video my-5">
+  <h2 class="h4 fw-semibold mb-3">Featured Session</h2>
+  <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm mb-3" *ngFor="let v of featured">
+    <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+  </div>
+  <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary btn-sm">See more videos on YouTube</a>
+</section>
+
+<section class="cta-final text-center my-5 p-5 bg-primary text-white rounded-4 shadow-sm">
+  <h2 class="h4 fw-bold mb-2">Ready to Become a MEAN Stack Developer?</h2>
+  <p class="mb-4">Join the next batch for structured guidance, projects & interview prep.</p>
+  <a routerLink="/contact" class="btn btn-light btn-lg">Contact / Join Now</a>
+</section>

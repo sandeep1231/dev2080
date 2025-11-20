@@ -1,0 +1,83 @@
+<section class="container py-5">
+  <h1 class="display-5 fw-semibold mb-3">MongoDB Training & Learning Hub</h1>
+  <p class="text-muted mb-4">Master NoSQL data modeling, CRUD operations, and performance tuning with MongoDB and Mongoose.</p>
+
+  <div class="row g-4">
+    <div class="col-12 col-lg-8">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h2 class="h4">Why MongoDB?</h2>
+          <ul>
+            <li>Flexible schema for evolving product needs</li>
+            <li>Rich JSON-like documents for nested data</li>
+            <li>Horizontal scaling and high availability</li>
+          </ul>
+
+          <h3 class="h5 mt-4">Core Concepts</h3>
+          <ul>
+            <li>Documents, Collections, Databases</li>
+            <li>CRUD: insertOne, find, updateOne, deleteMany</li>
+            <li>Indexes (single, compound, text) and performance</li>
+            <li>Aggregation framework (match, group, project)</li>
+            <li>Mongoose ODM: Schemas, Models, Validation, Middleware</li>
+          </ul>
+
+          <h3 class="h5 mt-4">Common Errors & Fixes</h3>
+          <ul>
+            <li><strong>ECONNREFUSED:</strong> Ensure MongoDB server is running and connection string is correct.</li>
+            <li><strong>CastError in Mongoose:</strong> Validate ObjectId params before querying.</li>
+            <li><strong>Performance issues:</strong> Add appropriate indexes; analyze with `explain()`.</li>
+          </ul>
+
+          <h3 class="h5 mt-4">Interview Q&A</h3>
+          <ul>
+            <li>Difference between SQL and NoSQL? When to choose MongoDB?</li>
+            <li>How does the Aggregation Pipeline work?</li>
+            <li>Explain indexing trade-offs and write amplification.</li>
+            <li>What are Mongoose middleware types and use cases?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h2 class="h5">Videos</h2>
+          <div class="ratio ratio-16x9 mb-3" *ngFor="let v of videos; let first = first" [class.mb-0]="first === false">
+            <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+            <p class="small mt-2 mb-0">{{ v.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow-sm mt-4">
+    <div class="card-body">
+      <h2 class="h5">Quick Start (Node.js + Mongoose)</h2>
+      <pre ngNonBindable class="bg-light p-3 rounded small mb-0"><code>npm install mongoose
+
+// connect
+import mongoose from 'mongoose';
+await mongoose.connect('mongodb://127.0.0.1:27017/training');
+
+// schema + model
+const courseSchema = new mongoose.Schema(&#123;
+  title: &#123; type: String, required: true &#125;,
+  hours: Number,
+&#125;, &#123; timestamps: true &#125;);
+const Course = mongoose.model('Course', courseSchema);
+
+// CRUD
+await Course.create(&#123; title: 'MongoDB Essentials', hours: 6 &#125;);
+const list = await Course.find().sort('-createdAt');
+</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="container pb-5">
+  <h2 class="h4 mb-3">Interactive Playground</h2>
+  <app-playground kind="mongo"></app-playground>
+</section>

@@ -1,0 +1,54 @@
+<section class="container py-5">
+  <h1 class="display-5 fw-semibold mb-3">Join the Batch / Contact Us</h1>
+  <p class="text-muted mb-4">Ask questions, request details, or join the next cohort. We’ll respond quickly.</p>
+
+  <div class="row g-4">
+    <div class="col-12 col-lg-7">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="h5 mb-3">Send a Message</h2>
+
+          <div *ngIf="submitted" class="alert alert-success" role="alert">
+            Thanks! Your message is received. We'll reach out shortly.
+          </div>
+
+          <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input id="name" type="text" class="form-control" formControlName="name">
+              <div class="text-danger small" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">Name is required (min 2 chars).</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" type="email" class="form-control" formControlName="email">
+              <div class="text-danger small" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">Valid email is required.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" rows="4" class="form-control" formControlName="message"></textarea>
+              <div class="text-danger small" *ngIf="form.get('message')?.touched && form.get('message')?.invalid">Please add at least 10 characters.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-5">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h2 class="h5">Next Batch Details</h2>
+          <ul>
+            <li>Mode: Online (Live)</li>
+            <li>Schedule: Weekends, 2 hours</li>
+            <li>Duration: 6-8 weeks</li>
+          </ul>
+          <a class="btn btn-outline-success" href="https://wa.me/" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+<div class="container-xxl">
+  <h1 class="h2 fw-bold mb-3">Angular Training – Learn Angular Step by Step</h1>
+  <p class="lead">Angular training for beginners and freshers: components, templates, routing, and real-world patterns.</p>
+
+  <section class="my-4">
+    <h2 class="h4">Why Angular?</h2>
+    <p>Angular is a TypeScript-based framework used in enterprise apps. Strong job market, structure, and tooling.</p>
+  </section>
+
+  <section class="container pb-5">
+    <h2 class="h4 mb-3">Interactive Playground</h2>
+    <app-playground kind="angular"></app-playground>
+  </section>
+
+  <section class="row g-3 my-2">
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm"><div class="card-body">
+        <h3 class="h6 fw-semibold">Components, Modules, Templates</h3>
+        <p class="small mb-0">Components render UI; templates describe markup; modules or standalone components organize features.</p>
+      </div></div>
+    </div>
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm"><div class="card-body">
+        <h3 class="h6 fw-semibold">Data Binding</h3>
+        <p class="small mb-0">Interpolation, property, event, and two-way binding keep UI and data in sync.</p>
+      </div></div>
+    </div>
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm"><div class="card-body">
+        <h3 class="h6 fw-semibold">Directives</h3>
+        <p class="small mb-0"><code>*ngIf</code> to conditionally render; <code>*ngFor</code> to loop over lists.</p>
+      </div></div>
+    </div>
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm"><div class="card-body">
+        <h3 class="h6 fw-semibold">Routing Basics</h3>
+        <p class="small mb-0">Map URLs to components, pass params, and lazy-load features.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="my-4">
+    <h2 class="h5 fw-semibold">Common Errors & Fixes</h2>
+    <ul class="small">
+      <li>Template parse error: likely a missing import of a directive or component.</li>
+      <li>NullInjectorError: a provider/service not registered where needed.</li>
+      <li>Cannot bind to 'ngModel': import FormsModule for two‑way binding.</li>
+    </ul>
+  </section>
+
+  <section class="my-4">
+    <h2 class="h5 fw-semibold">Angular Interview Questions (Beginner)</h2>
+    <ul class="small">
+      <li>What is a component? - UI + logic unit with a template and metadata.</li>
+      <li>What is data binding? - Ways to sync view and component properties/events.</li>
+      <li>What are directives? - Instructions to the DOM, like <code>*ngIf</code>, <code>*ngFor</code>.</li>
+      <li>What is dependency injection? - Providing services to components efficiently.</li>
+      <li>What is routing? - Navigation between views/components via URL.</li>
+      <li>What is RxJS used for? - Handling async streams, HTTP, events.</li>
+      <li>Difference: Template-driven vs Reactive forms? - Simplicity vs scalability/control.</li>
+      <li>What is change detection? - How Angular updates the view when data changes.</li>
+    </ul>
+  </section>
+
+  <section class="my-4">
+    <h2 class="h5 fw-semibold">Videos</h2>
+    <div class="row g-3">
+      <div class="col-md-6" *ngFor="let v of videos">
+        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+          <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+        </div>
+        <p class="small mt-2 mb-0">{{ v.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="my-4">
+    <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary">Visit my YouTube channel</a>
+  </div>
+</div>
