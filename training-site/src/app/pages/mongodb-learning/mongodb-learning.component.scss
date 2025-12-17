@@ -1,3 +1,232 @@
-.card + .card{margin-top:1rem}
-pre{white-space:pre-wrap}
-.playground-wrapper{margin-top:1rem}
+/* MongoDB learning page modern styles */
+
+.learning-container {
+	overflow: hidden;
+}
+
+// Page Header
+.page-header {
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+	border-radius: 2rem;
+	margin: 0 -1rem;
+	padding: 3rem 1rem;
+
+	.badge {
+		font-weight: 600;
+		padding: 0.5rem 1rem;
+	}
+
+	.display-4 {
+		line-height: 1.2;
+	}
+
+	.header-icon {
+		font-size: 5rem;
+		line-height: 1;
+		animation: float 6s ease-in-out infinite;
+	}
+
+	@keyframes float {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-20px); }
+	}
+}
+
+// Why Card
+.why-card {
+	border: 1px solid rgba(99, 102, 241, 0.1);
+	background: rgba(255, 255, 255, 0.5);
+	
+	.icon {
+		font-size: 2.5rem;
+		line-height: 1;
+		flex-shrink: 0;
+	}
+}
+
+// Playground
+.playground-wrapper {
+	box-shadow: var(--shadow-lg);
+	background: white;
+	overflow: hidden;
+}
+
+// Concept Cards
+.concept-card {
+	border: none;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease;
+	}
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-lg);
+
+		&::before {
+			transform: scaleX(1);
+		}
+	}
+
+	.concept-icon {
+		font-size: 2.5rem;
+		line-height: 1;
+		margin-bottom: 1rem;
+	}
+}
+
+// Error Cards
+.error-card {
+	border-left: 4px solid #ef4444 !important;
+	position: relative;
+	transition: all 0.3s ease;
+
+	&:hover {
+		box-shadow: var(--shadow-lg);
+		transform: translateY(-2px);
+	}
+
+	h4 {
+		margin-bottom: 0.75rem;
+	}
+}
+
+// Accordion
+.accordion {
+	gap: 0.75rem;
+	display: flex;
+	flex-direction: column;
+
+	.accordion-item {
+		border: 1px solid #e2e8f0;
+		border-radius: 0.75rem;
+		overflow: hidden;
+		transition: all 0.3s ease;
+
+		&:hover {
+			box-shadow: var(--shadow-md);
+		}
+	}
+
+	.accordion-button {
+		font-weight: 600;
+		color: #0f172a;
+		padding: 1.25rem;
+
+		&:not(.collapsed) {
+			background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+			color: #6366f1;
+		}
+
+		&::after {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%236366f1' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+		}
+	}
+
+	.accordion-body {
+		padding: 1.25rem;
+		color: #475569;
+		line-height: 1.8;
+	}
+}
+
+// Video Cards
+.video-card {
+	border: none;
+	overflow: hidden;
+	transition: all 0.3s ease;
+
+	&:hover {
+		box-shadow: var(--shadow-lg);
+		transform: translateY(-4px);
+	}
+
+	.card-body {
+		padding: 1.5rem;
+	}
+
+	.card-title {
+		margin-bottom: 0.75rem;
+		line-height: 1.4;
+	}
+
+	.card-text {
+		margin-bottom: 0;
+	}
+}
+
+// CTA Section
+.cta-section {
+	background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+	border: 1px solid rgba(99, 102, 241, 0.1);
+
+	h2 {
+		margin-bottom: 0.75rem;
+	}
+
+	.lead {
+		margin-bottom: 1.5rem;
+	}
+}
+
+// Resource Links
+.resource-links {
+	margin-top: 3rem;
+	padding-top: 2rem;
+	border-top: 1px solid #e2e8f0;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+// Responsive
+@media (max-width: 1024px) {
+	.page-header {
+		padding: 2rem 1rem;
+
+		.display-4 {
+			font-size: 2rem;
+		}
+
+		.header-icon {
+			font-size: 3rem;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.page-header {
+		padding: 1.5rem 1rem;
+
+		.display-4 {
+			font-size: 1.75rem;
+		}
+
+		.header-icon {
+			font-size: 2.5rem;
+		}
+	}
+
+	.concept-card {
+		.concept-icon {
+			font-size: 2rem;
+		}
+	}
+
+	.accordion-button {
+		padding: 1rem;
+	}
+}
+

@@ -1,54 +1,139 @@
-<section class="container py-5">
-  <h1 class="display-5 fw-semibold mb-3">Join the Batch / Contact Us</h1>
-  <p class="text-muted mb-4">Ask questions, request details, or join the next cohort. We’ll respond quickly.</p>
+<div class="contact-container">
+  <!-- Hero Section -->
+  <section class="contact-hero py-5 mb-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">
+        Join the <span class="gradient-text">Next Batch</span>
+      </h1>
+      <p class="lead text-muted mb-0">
+        Have questions? Want to enroll? We're here to help. Fill the form or reach out directly.
+      </p>
+    </div>
+  </section>
 
-  <div class="row g-4">
-    <div class="col-12 col-lg-7">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h2 class="h5 mb-3">Send a Message</h2>
-
-          <div *ngIf="submitted" class="alert alert-success" role="alert">
-            Thanks! Your message is received. We'll reach out shortly.
+  <div class="container pb-5">
+    <div class="row g-4">
+      <!-- Contact Form -->
+      <div class="col-12 col-lg-7">
+        <div class="form-card card">
+          <div class="card-header bg-transparent border-bottom">
+            <h2 class="h5 mb-0">
+              <span class="form-icon">💬</span>Send us a Message
+            </h2>
           </div>
-
-          <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input id="name" type="text" class="form-control" formControlName="name">
-              <div class="text-danger small" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">Name is required (min 2 chars).</div>
+          <div class="card-body">
+            <div *ngIf="submitted" class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Success!</strong> Your message has been received. We'll contact you within 24 hours.
+              <button type="button" class="btn-close" (click)="submitted = false"></button>
             </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input id="email" type="email" class="form-control" formControlName="email">
-              <div class="text-danger small" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">Valid email is required.</div>
-            </div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label fw-semibold">Full Name</label>
+                <input 
+                  id="name" 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="name"
+                  placeholder="Your full name">
+                <div class="invalid-feedback d-block small mt-2" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+                  <span class="text-danger">✗</span> Name is required (minimum 2 characters)
+                </div>
+              </div>
 
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea id="message" rows="4" class="form-control" formControlName="message"></textarea>
-              <div class="text-danger small" *ngIf="form.get('message')?.touched && form.get('message')?.invalid">Please add at least 10 characters.</div>
-            </div>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Email Address</label>
+                <input 
+                  id="email" 
+                  type="email" 
+                  class="form-control" 
+                  formControlName="email"
+                  placeholder="you@example.com">
+                <div class="invalid-feedback d-block small mt-2" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+                  <span class="text-danger">✗</span> Please enter a valid email address
+                </div>
+              </div>
 
-            <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
-          </form>
+              <div class="mb-3">
+                <label for="message" class="form-label fw-semibold">Message</label>
+                <textarea 
+                  id="message" 
+                  rows="5" 
+                  class="form-control" 
+                  formControlName="message"
+                  placeholder="Tell us about yourself, your goals, or any questions..."></textarea>
+                <div class="invalid-feedback d-block small mt-2" *ngIf="form.get('message')?.touched && form.get('message')?.invalid">
+                  <span class="text-danger">✗</span> Please enter at least 10 characters
+                </div>
+              </div>
+
+              <button 
+                type="submit" 
+                class="btn btn-primary btn-lg w-100" 
+                [disabled]="form.invalid">
+                <span class="me-2">🚀</span>Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-12 col-lg-5">
-      <div class="card shadow-sm h-100">
-        <div class="card-body">
-          <h2 class="h5">Next Batch Details</h2>
-          <ul>
-            <li>Mode: Online (Live)</li>
-            <li>Schedule: Weekends, 2 hours</li>
-            <li>Duration: 6-8 weeks</li>
-          </ul>
-          <a class="btn btn-outline-success" href="https://wa.me/" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <!-- Batch Info Sidebar -->
+      <div class="col-12 col-lg-5">
+        <div class="info-card glass p-4 rounded-3 h-100 d-flex flex-column gap-4">
+          <div>
+            <h2 class="h5 fw-bold mb-3">Next Batch Details</h2>
+            <div class="batch-info">
+              <div class="info-item mb-3">
+                <div class="info-icon">📅</div>
+                <div>
+                  <div class="fw-semibold">Schedule</div>
+                  <div class="small text-muted">Every Saturday & Sunday</div>
+                </div>
+              </div>
+              <div class="info-item mb-3">
+                <div class="info-icon">⏰</div>
+                <div>
+                  <div class="fw-semibold">Duration</div>
+                  <div class="small text-muted">8-12 weeks, 2 hours per session</div>
+                </div>
+              </div>
+              <div class="info-item mb-3">
+                <div class="info-icon">🌐</div>
+                <div>
+                  <div class="fw-semibold">Mode</div>
+                  <div class="small text-muted">Live online with recordings</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">👥</div>
+                <div>
+                  <div class="fw-semibold">Batch Size</div>
+                  <div class="small text-muted">Limited to 10-15 students</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-top pt-4">
+            <h3 class="h6 fw-bold mb-3">Quick Access</h3>
+            <div class="d-grid gap-2">
+              <a class="btn btn-success" href="https://wa.me/" target="_blank" rel="noopener">
+                <span class="me-2">💬</span>Chat on WhatsApp
+              </a>
+              <a class="btn btn-outline-primary" href="mailto:contact@example.com">
+                <span class="me-2">📧</span>Email Us
+              </a>
+            </div>
+          </div>
+
+          <div class="border-top pt-4">
+            <div class="alert alert-info alert-sm mb-0">
+              <span class="fw-semibold">Early Bird Offer:</span> Join within 2 weeks for 20% discount!
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>

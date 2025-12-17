@@ -1,58 +1,215 @@
-<div class="container-xxl">
-  <h1 class="h2 fw-bold mb-3">Node.js Training – Learn Node.js From Zero</h1>
-  <p class="lead">Run JavaScript on the server, build APIs, and connect to databases.</p>
-
-  <section class="row g-3 my-2">
-    <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
-      <h3 class="h6 fw-semibold">What is Node.js?</h3>
-      <p class="small mb-0">A runtime for executing JS on the server, built on V8.</p>
-    </div></div></div>
-    <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
-      <h3 class="h6 fw-semibold">NPM & Packages</h3>
-      <p class="small mb-0">Install and manage dependencies via <code>npm</code> or <code>pnpm</code>.</p>
-    </div></div></div>
-    <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
-      <h3 class="h6 fw-semibold">APIs & Express.js</h3>
-      <p class="small mb-0">Express is a minimal web framework to handle HTTP routes and middleware.</p>
-    </div></div></div>
-    <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
-      <h3 class="h6 fw-semibold">Real‑World Use</h3>
-      <p class="small mb-0">Build REST APIs, handle auth, process forms, connect MongoDB.</p>
-    </div></div></div>
-  </section>
-
-  <section class="container pb-5">
-    <h2 class="h4 mb-3">Interactive Playground</h2>
-    <app-playground kind="node"></app-playground>
-  </section>
-
-  <section class="my-4">
-    <h2 class="h5 fw-semibold">Node.js Interview Questions (Beginner)</h2>
-    <ul class="small">
-      <li>What is Node.js event loop? - Handles async callbacks non‑blocking.</li>
-      <li>What is Express middleware? - Functions that can modify request/response.</li>
-      <li>How do you create a route? - <code>app.get('/path', handler)</code>.</li>
-      <li>What is REST? - Architectural style for stateless APIs using HTTP verbs.</li>
-      <li>How to manage env config? - <code>process.env</code>, dotenv, config libraries.</li>
-      <li>How to connect MongoDB? - Using official driver or Mongoose.</li>
-      <li>What are status codes? - 2xx success, 4xx client errors, 5xx server errors.</li>
-      <li>What is package.json? - Project metadata and scripts/dependencies.</li>
-    </ul>
-  </section>
-
-  <section class="my-4">
-    <h2 class="h5 fw-semibold">Videos</h2>
-    <div class="row g-3">
-      <div class="col-md-6" *ngFor="let v of videos">
-        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
-          <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+<div class="learning-container">
+  <!-- Page Header -->
+  <section class="page-header py-5 mb-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="badge bg-light text-primary mb-3">Complete Node.js & Express</span>
+          <h1 class="display-4 fw-bold mb-3">
+            Node.js Training – Master <span class="gradient-text">Backend Development</span>
+          </h1>
+          <p class="lead text-muted mb-0">
+            Build scalable REST APIs and backend services. Learn Express.js, middleware, authentication, database integration, and production deployment.
+          </p>
         </div>
-        <p class="small mt-2 mb-0">{{ v.description }}</p>
+        <div class="col-lg-4 text-center">
+          <div class="header-icon">🔌</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="my-4">
-    <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary">Visit my YouTube channel</a>
+  <div class="container pb-5">
+    <!-- Why Node.js Section -->
+    <section class="mb-5">
+      <div class="why-card glass p-4 rounded-3">
+        <div class="d-flex gap-3 align-items-start">
+          <div class="icon">⚙️</div>
+          <div>
+            <h2 class="h4 fw-bold mb-2">Why Node.js?</h2>
+            <p class="text-muted mb-0">
+              Node.js brings JavaScript to the server, enabling full-stack development with a single language. Fast V8 engine, non-blocking I/O, huge ecosystem (npm), and massive job demand make it the perfect choice for modern backends.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Concepts -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Essential Node.js Concepts</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">🚀</div>
+              <h3 class="h6 fw-bold mb-2">Node.js & Runtime</h3>
+              <p class="small text-muted mb-0">
+                JavaScript runtime on Chrome's V8 engine. Enables running JS outside browsers with file system, OS, and networking access.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">📦</div>
+              <h3 class="h6 fw-bold mb-2">NPM & Package Management</h3>
+              <p class="small text-muted mb-0">
+                Node Package Manager for installing, managing, and sharing packages. Lock files for reproducible builds.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">🛣️</div>
+              <h3 class="h6 fw-bold mb-2">Express.js Framework</h3>
+              <p class="small text-muted mb-0">
+                Minimal web framework for routing, middleware, template engines, and building RESTful APIs quickly.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">📡</div>
+              <h3 class="h6 fw-bold mb-2">REST APIs & HTTP</h3>
+              <p class="small text-muted mb-0">
+                Build stateless APIs using HTTP verbs (GET, POST, PUT, DELETE). Handle requests, responses, and status codes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Playground -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Try It Out – Interactive Playground</h2>
+      <div class="playground-wrapper rounded-3 overflow-hidden shadow-lg">
+        <app-playground kind="node"></app-playground>
+      </div>
+    </section>
+
+    <!-- Common Errors Section -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Common Errors & Quick Fixes</h2>
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Cannot Find Module</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Package not installed or wrong import path
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Run `npm install package-name` or check the import path.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Port Already in Use</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Another process is using the port
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Use a different port or kill the existing process.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ CORS Errors</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Cross-origin requests blocked
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Install and use `cors` middleware to enable cross-origin requests.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Connection Refused</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Database or service not running
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Ensure MongoDB/database is running and connection string is correct.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Questions -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Node.js Interview Questions</h2>
+      <div class="accordion" id="nodeFAQ">
+        <div class="accordion-item" *ngFor="let q of questions; let i = index">
+          <h2 class="accordion-header">
+            <button class="accordion-button" [ngClass]="{ 'collapsed': expandedNode !== i }" type="button" (click)="toggleNode(i)" [attr.aria-expanded]="expandedNode === i">
+              {{ q.question }}
+            </button>
+          </h2>
+          <div class="accordion-collapse collapse" [ngClass]="{ 'show': expandedNode === i }">
+            <div class="accordion-body">
+              {{ q.answer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Tutorials - COMMENTED OUT: Videos coming soon -->
+    <!-- 
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Video Tutorials</h2>
+      <div class="row g-4">
+        <div class="col-lg-6" *ngFor="let v of videos">
+          <div class="video-card card h-100">
+            <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+              <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title fw-semibold">{{ v.title }}</h4>
+              <p class="card-text small text-muted">{{ v.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 rounded-4 mb-5">
+      <div class="container text-center">
+        <h2 class="h3 fw-bold mb-3">Ready to Become a Backend Developer?</h2>
+        <p class="lead text-muted mb-4">
+          Master Node.js, Express, and APIs. Build scalable backends and land your dream job.
+        </p>
+        <a routerLink="/contact" class="btn btn-primary btn-lg">Start Learning Today</a>
+      </div>
+    </section>
+
+    <!-- Resource Links - COMMENTED OUT: YouTube channel coming soon -->
+    <!-- 
+    <div class="resource-links">
+      <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary">
+        <span class="me-2">▶️</span>Watch More Videos
+      </a>
+    </div>
+    -->
   </div>
 </div>

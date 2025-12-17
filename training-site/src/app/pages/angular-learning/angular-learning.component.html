@@ -1,80 +1,215 @@
-<div class="container-xxl">
-  <h1 class="h2 fw-bold mb-3">Angular Training – Learn Angular Step by Step</h1>
-  <p class="lead">Angular training for beginners and freshers: components, templates, routing, and real-world patterns.</p>
-
-  <section class="my-4">
-    <h2 class="h4">Why Angular?</h2>
-    <p>Angular is a TypeScript-based framework used in enterprise apps. Strong job market, structure, and tooling.</p>
-  </section>
-
-  <section class="container pb-5">
-    <h2 class="h4 mb-3">Interactive Playground</h2>
-    <app-playground kind="angular"></app-playground>
-  </section>
-
-  <section class="row g-3 my-2">
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm"><div class="card-body">
-        <h3 class="h6 fw-semibold">Components, Modules, Templates</h3>
-        <p class="small mb-0">Components render UI; templates describe markup; modules or standalone components organize features.</p>
-      </div></div>
-    </div>
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm"><div class="card-body">
-        <h3 class="h6 fw-semibold">Data Binding</h3>
-        <p class="small mb-0">Interpolation, property, event, and two-way binding keep UI and data in sync.</p>
-      </div></div>
-    </div>
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm"><div class="card-body">
-        <h3 class="h6 fw-semibold">Directives</h3>
-        <p class="small mb-0"><code>*ngIf</code> to conditionally render; <code>*ngFor</code> to loop over lists.</p>
-      </div></div>
-    </div>
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm"><div class="card-body">
-        <h3 class="h6 fw-semibold">Routing Basics</h3>
-        <p class="small mb-0">Map URLs to components, pass params, and lazy-load features.</p>
-      </div></div>
-    </div>
-  </section>
-
-  <section class="my-4">
-    <h2 class="h5 fw-semibold">Common Errors & Fixes</h2>
-    <ul class="small">
-      <li>Template parse error: likely a missing import of a directive or component.</li>
-      <li>NullInjectorError: a provider/service not registered where needed.</li>
-      <li>Cannot bind to 'ngModel': import FormsModule for two‑way binding.</li>
-    </ul>
-  </section>
-
-  <section class="my-4">
-    <h2 class="h5 fw-semibold">Angular Interview Questions (Beginner)</h2>
-    <ul class="small">
-      <li>What is a component? - UI + logic unit with a template and metadata.</li>
-      <li>What is data binding? - Ways to sync view and component properties/events.</li>
-      <li>What are directives? - Instructions to the DOM, like <code>*ngIf</code>, <code>*ngFor</code>.</li>
-      <li>What is dependency injection? - Providing services to components efficiently.</li>
-      <li>What is routing? - Navigation between views/components via URL.</li>
-      <li>What is RxJS used for? - Handling async streams, HTTP, events.</li>
-      <li>Difference: Template-driven vs Reactive forms? - Simplicity vs scalability/control.</li>
-      <li>What is change detection? - How Angular updates the view when data changes.</li>
-    </ul>
-  </section>
-
-  <section class="my-4">
-    <h2 class="h5 fw-semibold">Videos</h2>
-    <div class="row g-3">
-      <div class="col-md-6" *ngFor="let v of videos">
-        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
-          <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+<div class="learning-container">
+  <!-- Page Header -->
+  <section class="page-header py-5 mb-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="badge bg-light text-primary mb-3">Complete Angular Mastery</span>
+          <h1 class="display-4 fw-bold mb-3">
+            Angular Training – Learn <span class="gradient-text">Step by Step</span>
+          </h1>
+          <p class="lead text-muted mb-0">
+            Master Angular from basics to advanced patterns. Build dynamic, scalable single-page applications with TypeScript, routing, forms, and RxJS.
+          </p>
         </div>
-        <p class="small mt-2 mb-0">{{ v.description }}</p>
+        <div class="col-lg-4 text-center">
+          <div class="header-icon">⚡</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="my-4">
-    <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary">Visit my YouTube channel</a>
+  <div class="container pb-5">
+    <!-- Why Angular Section -->
+    <section class="mb-5">
+      <div class="why-card glass p-4 rounded-3">
+        <div class="d-flex gap-3 align-items-start">
+          <div class="icon">🎯</div>
+          <div>
+            <h2 class="h4 fw-bold mb-2">Why Angular?</h2>
+            <p class="text-muted mb-0">
+              Angular is a powerful TypeScript-based framework for enterprise web applications. It offers strong tooling, structured architecture, excellent testing capabilities, and a huge job market. Perfect for building complex, scalable applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Playground -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Try It Out – Interactive Playground</h2>
+      <div class="playground-wrapper rounded-3 overflow-hidden shadow-lg">
+        <app-playground kind="angular"></app-playground>
+      </div>
+    </section>
+
+    <!-- Core Concepts -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Core Concepts at a Glance</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">🧩</div>
+              <h3 class="h6 fw-bold mb-2">Components & Templates</h3>
+              <p class="small text-muted mb-0">
+                Components are building blocks with UI logic. Templates define markup using Angular syntax for dynamic rendering.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">🔗</div>
+              <h3 class="h6 fw-bold mb-2">Data Binding</h3>
+              <p class="small text-muted mb-0">
+                Keep view and component in sync: interpolation, property binding, event binding, and two-way binding.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">⚙️</div>
+              <h3 class="h6 fw-bold mb-2">Directives & Control</h3>
+              <p class="small text-muted mb-0">
+                Use directives like *ngIf, *ngFor, *ngSwitch to manipulate DOM and control rendering logic.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">🛣️</div>
+              <h3 class="h6 fw-bold mb-2">Routing Basics</h3>
+              <p class="small text-muted mb-0">
+                Map URLs to components, pass route params, lazy-load features, and implement lazy loading for performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Errors Section -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Common Errors & Quick Fixes</h2>
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Template Parse Error</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Missing import of a component or directive
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Import the component/directive in your component's imports array or in a shared module.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ NullInjectorError</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Service not registered/provided
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Provide the service in the component's providers array or in a parent injector.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Cannot Bind to 'ngModel'</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> FormsModule not imported
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Import FormsModule in your component or module for two-way binding.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Change Detection Issues</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Angular not detecting external changes
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Use ngZone or markForCheck() to trigger change detection manually.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Questions -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Angular Interview Questions</h2>
+      <div class="accordion" id="angularFAQ">
+        <div class="accordion-item" *ngFor="let q of questions; let i = index">
+          <h2 class="accordion-header">
+            <button class="accordion-button" [ngClass]="{ 'collapsed': expandedAngular !== i }" type="button" (click)="toggleAngular(i)" [attr.aria-expanded]="expandedAngular === i">
+              {{ q.question }}
+            </button>
+          </h2>
+          <div class="accordion-collapse collapse" [ngClass]="{ 'show': expandedAngular === i }">
+            <div class="accordion-body">
+              {{ q.answer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Tutorials - COMMENTED OUT: Videos coming soon -->
+    <!-- 
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Video Tutorials</h2>
+      <div class="row g-4">
+        <div class="col-lg-6" *ngFor="let v of videos">
+          <div class="video-card card h-100">
+            <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+              <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title fw-semibold">{{ v.title }}</h4>
+              <p class="card-text small text-muted">{{ v.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 rounded-4 mb-5">
+      <div class="container text-center">
+        <h2 class="h3 fw-bold mb-3">Ready to Master Angular?</h2>
+        <p class="lead text-muted mb-4">
+          Get hands-on training with expert guidance. Build real projects and land your dream job.
+        </p>
+        <a routerLink="/contact" class="btn btn-primary btn-lg">Start Learning Today</a>
+      </div>
+    </section>
+
+    <!-- Resource Links - COMMENTED OUT: YouTube channel coming soon -->
+    <!-- 
+    <div class="resource-links">
+      <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary">
+        <span class="me-2">▶️</span>Watch More Videos
+      </a>
+    </div>
+    -->
   </div>
 </div>

@@ -1,83 +1,213 @@
-<section class="container py-5">
-  <h1 class="display-5 fw-semibold mb-3">MongoDB Training & Learning Hub</h1>
-  <p class="text-muted mb-4">Master NoSQL data modeling, CRUD operations, and performance tuning with MongoDB and Mongoose.</p>
-
-  <div class="row g-4">
-    <div class="col-12 col-lg-8">
-      <div class="card shadow-sm h-100">
-        <div class="card-body">
-          <h2 class="h4">Why MongoDB?</h2>
-          <ul>
-            <li>Flexible schema for evolving product needs</li>
-            <li>Rich JSON-like documents for nested data</li>
-            <li>Horizontal scaling and high availability</li>
-          </ul>
-
-          <h3 class="h5 mt-4">Core Concepts</h3>
-          <ul>
-            <li>Documents, Collections, Databases</li>
-            <li>CRUD: insertOne, find, updateOne, deleteMany</li>
-            <li>Indexes (single, compound, text) and performance</li>
-            <li>Aggregation framework (match, group, project)</li>
-            <li>Mongoose ODM: Schemas, Models, Validation, Middleware</li>
-          </ul>
-
-          <h3 class="h5 mt-4">Common Errors & Fixes</h3>
-          <ul>
-            <li><strong>ECONNREFUSED:</strong> Ensure MongoDB server is running and connection string is correct.</li>
-            <li><strong>CastError in Mongoose:</strong> Validate ObjectId params before querying.</li>
-            <li><strong>Performance issues:</strong> Add appropriate indexes; analyze with `explain()`.</li>
-          </ul>
-
-          <h3 class="h5 mt-4">Interview Q&A</h3>
-          <ul>
-            <li>Difference between SQL and NoSQL? When to choose MongoDB?</li>
-            <li>How does the Aggregation Pipeline work?</li>
-            <li>Explain indexing trade-offs and write amplification.</li>
-            <li>What are Mongoose middleware types and use cases?</li>
-          </ul>
+<div class="learning-container">
+  <!-- Page Header -->
+  <section class="page-header py-5 mb-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="badge bg-light text-primary mb-3">MongoDB & NoSQL Mastery</span>
+          <h1 class="display-4 fw-bold mb-3">
+            MongoDB Training – Master <span class="gradient-text">NoSQL Databases</span>
+          </h1>
+          <p class="lead text-muted mb-0">
+            Build flexible, scalable databases with MongoDB. Learn document model, CRUD operations, aggregation, indexing, and best practices for modern applications.
+          </p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <div class="header-icon">🗄️</div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="col-12 col-lg-4">
-      <div class="card shadow-sm h-100">
-        <div class="card-body">
-          <h2 class="h5">Videos</h2>
-          <div class="ratio ratio-16x9 mb-3" *ngFor="let v of videos; let first = first" [class.mb-0]="first === false">
-            <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
-            <p class="small mt-2 mb-0">{{ v.description }}</p>
+  <div class="container pb-5">
+    <!-- Why MongoDB Section -->
+    <section class="mb-5">
+      <div class="why-card glass p-4 rounded-3">
+        <div class="d-flex gap-3 align-items-start">
+          <div class="icon">📊</div>
+          <div>
+            <h2 class="h4 fw-bold mb-2">Why MongoDB?</h2>
+            <p class="text-muted mb-0">
+              MongoDB is a leading NoSQL database storing data as flexible JSON-like documents. Perfect for rapid development, horizontal scaling, and handling unstructured data. Widely used in modern web applications and microservices.
+            </p>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Core Concepts -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Essential MongoDB Concepts</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">📄</div>
+              <h3 class="h6 fw-bold mb-2">Document Model</h3>
+              <p class="small text-muted mb-0">
+                MongoDB stores data as BSON documents (JSON-like format) instead of tables. Flexible schema allows varied document structures in the same collection.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">⚡</div>
+              <h3 class="h6 fw-bold mb-2">CRUD Operations</h3>
+              <p class="small text-muted mb-0">
+                Create (insertOne), Read (find), Update (updateOne), Delete (deleteOne). Modern, intuitive query language for database operations.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">🔗</div>
+              <h3 class="h6 fw-bold mb-2">Indexing & Performance</h3>
+              <p class="small text-muted mb-0">
+                Indexes accelerate queries. Create indexes on frequently queried fields. Compound indexes for multi-field queries.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="concept-icon">🔄</div>
+              <h3 class="h6 fw-bold mb-2">Aggregation Pipeline</h3>
+              <p class="small text-muted mb-0">
+                Powerful data transformation using stages: match, group, sort, project. Build complex data analysis queries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Playground -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Try It Out – Interactive Playground</h2>
+      <div class="playground-wrapper rounded-3 overflow-hidden shadow-lg">
+        <app-playground kind="mongo"></app-playground>
+      </div>
+    </section>
+
+    <!-- Common Errors Section -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Common Errors & Quick Fixes</h2>
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Connection Failed</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Invalid connection string or MongoDB not running
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Verify connection string, check IP whitelist, ensure MongoDB service is running.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Authentication Failed</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Wrong credentials or user not created
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Verify username/password, create user in admin database if needed.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Duplicate Key Error</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Unique index violation
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Ensure field values are unique or remove unique constraint from index.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100 border-danger">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">❌ Query Performance Issue</h4>
+              <p class="small mb-2">
+                <strong>Cause:</strong> Missing indexes or inefficient query
+              </p>
+              <p class="small text-muted">
+                <strong>Fix:</strong> Use explain() to analyze query, add indexes, or rewrite query logic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Questions -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">MongoDB Interview Questions</h2>
+      <div class="accordion" id="mongoFAQ">
+        <div class="accordion-item" *ngFor="let q of questions; let i = index">
+          <h2 class="accordion-header">
+            <button class="accordion-button" [ngClass]="{ 'collapsed': expandedMongo !== i }" type="button" (click)="toggleMongo(i)" [attr.aria-expanded]="expandedMongo === i">
+              {{ q.question }}
+            </button>
+          </h2>
+          <div class="accordion-collapse collapse" [ngClass]="{ 'show': expandedMongo === i }">
+            <div class="accordion-body">
+              {{ q.answer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Tutorials - COMMENTED OUT: Videos coming soon -->
+    <!-- 
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Video Tutorials</h2>
+      <div class="row g-4">
+        <div class="col-lg-6" *ngFor="let v of videos">
+          <div class="video-card card h-100">
+            <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+              <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title fw-semibold">{{ v.title }}</h4>
+              <p class="card-text small text-muted">{{ v.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 rounded-4 mb-5">
+      <div class="container text-center">
+        <h2 class="h3 fw-bold mb-3">Ready to Master MongoDB?</h2>
+        <p class="lead text-muted mb-4">
+          Build scalable, flexible databases. Learn from expert instructors with real-world experience.
+        </p>
+        <a routerLink="/contact" class="btn btn-primary btn-lg">Start Learning Today</a>
+      </div>
+    </section>
+
+    <!-- Resource Links -->
+    <div class="resource-links">
+      <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary">
+        <span class="me-2">▶️</span>Watch More Videos
+      </a>
     </div>
   </div>
-
-  <div class="card shadow-sm mt-4">
-    <div class="card-body">
-      <h2 class="h5">Quick Start (Node.js + Mongoose)</h2>
-      <pre ngNonBindable class="bg-light p-3 rounded small mb-0"><code>npm install mongoose
-
-// connect
-import mongoose from 'mongoose';
-await mongoose.connect('mongodb://127.0.0.1:27017/training');
-
-// schema + model
-const courseSchema = new mongoose.Schema(&#123;
-  title: &#123; type: String, required: true &#125;,
-  hours: Number,
-&#125;, &#123; timestamps: true &#125;);
-const Course = mongoose.model('Course', courseSchema);
-
-// CRUD
-await Course.create(&#123; title: 'MongoDB Essentials', hours: 6 &#125;);
-const list = await Course.find().sort('-createdAt');
-</code></pre>
-    </div>
-  </div>
-</section>
-
-<section class="container pb-5">
-  <h2 class="h4 mb-3">Interactive Playground</h2>
-  <app-playground kind="mongo"></app-playground>
-</section>
+</div>

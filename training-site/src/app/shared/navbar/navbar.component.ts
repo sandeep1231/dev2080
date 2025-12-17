@@ -1,13 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 10;
+  }
+
   // Collapse the mobile navbar after a navigation link click.
   collapseIfOpen() {
     const nav = document.getElementById('mainNav');

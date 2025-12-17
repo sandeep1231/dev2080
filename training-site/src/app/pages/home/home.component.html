@@ -1,75 +1,206 @@
-<section class="hero text-center py-5">
-  <h1 class="display-5 fw-bold mb-3">Angular, Node.js & MongoDB Training</h1>
-  <p class="lead mb-4">Industry‑oriented, project‑based MEAN stack learning for students, freshers & working professionals.</p>
-  <div class="d-flex justify-content-center gap-3">
-    <a routerLink="/contact" class="btn btn-primary btn-lg">Join Next Batch</a>
-    <a routerLink="/angular" class="btn btn-outline-secondary btn-lg">Free Learning Content</a>
-  </div>
-</section>
-
-<section class="trainer my-5">
-  <div class="row g-4 align-items-center">
-    <div class="col-md-5">
-      <div class="p-4 bg-white shadow-sm rounded-3 h-100">
-        <h2 class="h4 fw-semibold">Your Mentor</h2>
-        <p class="mb-2">Senior Full‑Stack Developer with real product & interview experience.</p>
-        <ul class="small mb-0 list-unstyled">
-          <li>• Hands‑on coding sessions</li>
-          <li>• Real project workflows</li>
-          <li>• Interview preparation & doubt support</li>
-        </ul>
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero-section fade-in">
+    <div class="hero-background"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-content slide-in-left">
+            <span class="badge bg-light text-primary mb-3">Master MEAN Stack in 8-12 Weeks</span>
+            <h1 class="display-4 fw-bold mb-4 lh-1">
+              Build Full-Stack Web Apps with 
+              <span class="gradient-text">Angular, Node & MongoDB</span>
+            </h1>
+            <p class="lead text-muted mb-4">
+              Industry-oriented, hands-on training for students, freshers & professionals. Learn by building real projects with expert mentorship.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a routerLink="/contact" class="btn btn-primary btn-lg">
+                <span class="me-2">🚀</span>Join Next Batch
+              </a>
+              <a routerLink="/angular" class="btn btn-outline-primary btn-lg">
+                Explore Free Content
+              </a>
+            </div>
+            <div class="mt-5 pt-3 border-top">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <div class="stat">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Students Trained</div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="stat">
+                    <div class="stat-value">95%</div>
+                    <div class="stat-label">Placement Rate</div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="stat">
+                    <div class="stat-value">4.8★</div>
+                    <div class="stat-label">Average Rating</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-visual fade-in">
+            <div class="code-window">
+              <div class="window-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-code">
+                <code>
+                  <span class="comment">// Build amazing full-stack apps</span><br>
+                  <span class="keyword">const</span> app = <span class="keyword">new</span> <span class="class">MEANStack</span>();<br>
+                  app.<span class="method">learn</span>(<span class="string">'Angular'</span>)<br>
+                  &nbsp;&nbsp;.<span class="method">with</span>(<span class="string">'Node.js'</span>)<br>
+                  &nbsp;&nbsp;.<span class="method">andDatabase</span>(<span class="string">'MongoDB'</span>);<br>
+                  <span class="keyword">await</span> app.<span class="method">deploy</span>();
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-md-7">
+  </section>
+
+  <!-- What You'll Learn & Master -->
+  <section class="learning-section py-5 my-5">
+    <div class="container">
+      <h2 class="h3 fw-bold text-center mb-5">What You'll Learn & Master</h2>
+      
+      <!-- Core MEAN Technologies -->
+      <div class="row g-3 mb-5">
+        <div class="col-sm-6 col-lg-3" *ngFor="let item of curriculumItems.slice(1, 5); let i = index">
+          <div class="tech-card card h-100 fade-in">
+            <div class="card-body text-center">
+              <div class="tech-icon mb-3">{{ getIcon(i + 1) }}</div>
+              <h4 class="fw-bold">{{ item }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider-line my-5"></div>
+      
+      <!-- Learning Support & Benefits -->
+      <h3 class="h5 fw-bold text-center mb-4">How You'll Learn</h3>
       <div class="row g-3">
-        <div class="col-sm-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-lg-3">
+          <div class="benefit-card card h-100">
             <div class="card-body">
-              <h3 class="h6 fw-bold">Angular</h3>
-              <p class="small mb-0">Build dynamic, component driven frontends with TypeScript.</p>
+              <div class="benefit-icon mb-3">💻</div>
+              <h5 class="fw-bold mb-2">Hands-On Coding</h5>
+              <p class="small text-muted mb-0">Live coding sessions with real-time debugging and best practices.</p>
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-lg-3">
+          <div class="benefit-card card h-100">
             <div class="card-body">
-              <h3 class="h6 fw-bold">Node.js</h3>
-              <p class="small mb-0">Create scalable REST APIs & backend services.</p>
+              <div class="benefit-icon mb-3">🚀</div>
+              <h5 class="fw-bold mb-2">Real Projects</h5>
+              <p class="small text-muted mb-0">Build portfolio-worthy projects from day one with guidance.</p>
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-sm-6 col-lg-3">
+          <div class="benefit-card card h-100">
             <div class="card-body">
-              <h3 class="h6 fw-bold">MongoDB</h3>
-              <p class="small mb-0">Fast NoSQL persistence for modern web apps.</p>
+              <div class="benefit-icon mb-3">💼</div>
+              <h5 class="fw-bold mb-2">Interview Ready</h5>
+              <p class="small text-muted mb-0">Mock interviews, DSA prep, and resume reviews included.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="benefit-card card h-100">
+            <div class="card-body">
+              <div class="benefit-icon mb-3">🤝</div>
+              <h5 class="fw-bold mb-2">Lifetime Support</h5>
+              <p class="small text-muted mb-0">Ongoing doubt support and career guidance after course completion.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="curriculum my-5">
-  <h2 class="h4 fw-semibold mb-3">High‑Level Curriculum Snapshot</h2>
-  <div class="row g-3">
-    <div class="col-sm-6 col-lg-4" *ngFor="let item of ['Web basics','Angular fundamentals','API development with Node','Database with MongoDB','Full‑stack mini project'];">
-      <div class="p-3 bg-white shadow-sm rounded-3 small fw-medium">{{ item }}</div>
+  <!-- Featured Video -->
+  <!-- VIDEO SECTION COMMENTED OUT - VIDEOS COMING SOON -->
+  <section class="featured-video-section py-5 my-5 bg-gradient-light rounded-4">
+    <div class="container">
+      <h2 class="h3 fw-bold mb-4">Featured Sessions</h2>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg fade-in bg-light d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              <div style="font-size: 4rem; margin-bottom: 1rem;">🎬</div>
+              <h4 class="fw-bold mb-2">Videos Coming Soon!</h4>
+              <p class="text-muted small">Our video tutorials are being recorded and will be available shortly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="video-info glass p-4 rounded-3 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h3 class="fw-bold mb-3">Why This Training?</h3>
+              <ul class="list-unstyled">
+                <li class="mb-3 d-flex gap-2">
+                  <span class="text-primary fw-bold">✓</span>
+                  <span class="small">Complete MEAN stack curriculum</span>
+                </li>
+                <li class="mb-3 d-flex gap-2">
+                  <span class="text-primary fw-bold">✓</span>
+                  <span class="small">Industry-relevant projects</span>
+                </li>
+                <li class="mb-3 d-flex gap-2">
+                  <span class="text-primary fw-bold">✓</span>
+                  <span class="small">1-on-1 mentorship</span>
+                </li>
+                <li class="mb-3 d-flex gap-2">
+                  <span class="text-primary fw-bold">✓</span>
+                  <span class="small">Job-ready portfolio</span>
+                </li>
+                <li class="d-flex gap-2">
+                  <span class="text-primary fw-bold">✓</span>
+                  <span class="small">Placement assistance</span>
+                </li>
+              </ul>
+            </div>
+            <a routerLink="/contact" class="btn btn-primary btn-lg mt-4">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="featured-video my-5">
-  <h2 class="h4 fw-semibold mb-3">Featured Session</h2>
-  <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm mb-3" *ngFor="let v of featured">
-    <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
-  </div>
-  <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary btn-sm">See more videos on YouTube</a>
-</section>
-
-<section class="cta-final text-center my-5 p-5 bg-primary text-white rounded-4 shadow-sm">
-  <h2 class="h4 fw-bold mb-2">Ready to Become a MEAN Stack Developer?</h2>
-  <p class="mb-4">Join the next batch for structured guidance, projects & interview prep.</p>
-  <a routerLink="/contact" class="btn btn-light btn-lg">Contact / Join Now</a>
-</section>
+  <!-- CTA Section -->
+  <section class="cta-section py-5 my-5">
+    <div class="container">
+      <div class="cta-card glass p-5 rounded-4 text-center">
+        <h2 class="h3 fw-bold mb-3">Ready to Master MEAN Stack?</h2>
+        <p class="lead text-muted mb-4">
+          Join hundreds of successful developers. Limited seats per batch.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a routerLink="/contact" class="btn btn-primary btn-lg">
+            Reserve Your Seat Today
+          </a>
+          <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary btn-lg">
+            Watch Free Videos
+          </a>
+        </div>
+        <p class="small text-muted mt-4">Next batch starts in 2 weeks. Early bird discount available.</p>
+      </div>
+    </div>
+  </section>
+</div>
