@@ -1,0 +1,108 @@
+.privacy-policy-page {
+	min-height: calc(100vh - 100px);
+	background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+
+	.page-header {
+		border-bottom: 3px solid #6366f1;
+		padding-bottom: 2rem;
+
+		h1 {
+			color: #0f172a;
+			background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+	}
+
+	.policy-section {
+		h2 {
+			color: #1e293b;
+			position: relative;
+			padding-left: 1rem;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 4px;
+				height: 70%;
+				background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
+				border-radius: 2px;
+			}
+		}
+
+		h3 {
+			color: #334155;
+		}
+
+		p {
+			color: #475569;
+			line-height: 1.8;
+		}
+
+		.policy-list {
+			color: #475569;
+			line-height: 1.8;
+			padding-left: 1.5rem;
+
+			li {
+				margin-bottom: 0.75rem;
+
+				strong {
+					color: #1e293b;
+					font-weight: 600;
+				}
+			}
+		}
+
+		.lead {
+			font-size: 1.125rem;
+			color: #334155;
+			line-height: 1.8;
+		}
+
+		a {
+			color: #6366f1;
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: #8b5cf6;
+				text-decoration: underline;
+			}
+		}
+
+		.contact-info {
+			border-left: 4px solid #6366f1;
+
+			a {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+// Responsive
+@media (max-width: 768px) {
+	.privacy-policy-page {
+		.page-header {
+			h1 {
+				font-size: 2rem;
+			}
+		}
+
+		.policy-section {
+			h2 {
+				font-size: 1.5rem;
+			}
+
+			h3 {
+				font-size: 1.25rem;
+			}
+		}
+	}
+}

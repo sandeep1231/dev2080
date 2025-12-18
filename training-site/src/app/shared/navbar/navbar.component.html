@@ -1,7 +1,15 @@
 <nav class="navbar navbar-expand-lg sticky-top" [ngClass]="{ 'navbar-scrolled': isScrolled }">
   <div class="container">
-    <a class="navbar-brand gradient-text" routerLink="/">
-      <span class="brand-icon">⚡</span>MEAN Stack
+    <a class="navbar-brand" routerLink="/">
+      <div class="brand-stack">
+        <span class="stack-letter m">M</span>
+        <span class="stack-letter e">E</span>
+        <span class="stack-letter a">A</span>
+        <span class="stack-letter n">N</span>
+      </div>
+      <div class="brand-text-group">
+        <span class="brand-text-main">Training</span>
+      </div>
     </a>
     <button class="navbar-toggler" type="button" (click)="toggleNav()" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

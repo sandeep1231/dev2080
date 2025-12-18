@@ -22,28 +22,6 @@
                 Explore Free Content
               </a>
             </div>
-            <div class="mt-5 pt-3 border-top">
-              <div class="row g-3">
-                <div class="col-auto">
-                  <div class="stat">
-                    <div class="stat-value">500+</div>
-                    <div class="stat-label">Students Trained</div>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <div class="stat">
-                    <div class="stat-value">95%</div>
-                    <div class="stat-label">Placement Rate</div>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <div class="stat">
-                    <div class="stat-value">4.8★</div>
-                    <div class="stat-label">Average Rating</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div class="col-lg-6">
@@ -78,13 +56,45 @@
       
       <!-- Core MEAN Technologies -->
       <div class="row g-3 mb-5">
-        <div class="col-sm-6 col-lg-3" *ngFor="let item of curriculumItems.slice(1, 5); let i = index">
-          <div class="tech-card card h-100 fade-in">
-            <div class="card-body text-center">
-              <div class="tech-icon mb-3">{{ getIcon(i + 1) }}</div>
-              <h4 class="fw-bold">{{ item }}</h4>
+        <div class="col-sm-6 col-lg-3">
+          <a routerLink="/angular" class="card-link">
+            <div class="tech-card card h-100 fade-in">
+              <div class="card-body text-center">
+                <div class="tech-icon mb-3">{{ getIcon(1) }}</div>
+                <h4 class="fw-bold">Angular Fundamentals</h4>
+              </div>
             </div>
-          </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <a routerLink="/node" class="card-link">
+            <div class="tech-card card h-100 fade-in">
+              <div class="card-body text-center">
+                <div class="tech-icon mb-3">{{ getIcon(2) }}</div>
+                <h4 class="fw-bold">API Development with Node</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <a routerLink="/mongodb" class="card-link">
+            <div class="tech-card card h-100 fade-in">
+              <div class="card-body text-center">
+                <div class="tech-icon mb-3">{{ getIcon(3) }}</div>
+                <h4 class="fw-bold">Database with MongoDB</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <a routerLink="/resources" class="card-link">
+            <div class="tech-card card h-100 fade-in">
+              <div class="card-body text-center">
+                <div class="tech-icon mb-3">{{ getIcon(4) }}</div>
+                <h4 class="fw-bold">Full-Stack Mini Project</h4>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -160,23 +170,23 @@
                 </li>
                 <li class="mb-3 d-flex gap-2">
                   <span class="text-primary fw-bold">✓</span>
-                  <span class="small">Industry-relevant projects</span>
+                  <span class="small">Industry-relevant real projects</span>
                 </li>
                 <li class="mb-3 d-flex gap-2">
                   <span class="text-primary fw-bold">✓</span>
-                  <span class="small">1-on-1 mentorship</span>
+                  <span class="small">Personal 1-on-1 mentorship</span>
                 </li>
                 <li class="mb-3 d-flex gap-2">
                   <span class="text-primary fw-bold">✓</span>
-                  <span class="small">Job-ready portfolio</span>
+                  <span class="small">Job-ready portfolio building</span>
                 </li>
                 <li class="d-flex gap-2">
                   <span class="text-primary fw-bold">✓</span>
-                  <span class="small">Placement assistance</span>
+                  <span class="small">Lifetime doubt support</span>
                 </li>
               </ul>
             </div>
-            <a routerLink="/contact" class="btn btn-primary btn-lg mt-4">Start Free Trial</a>
+            <a routerLink="/contact" class="btn btn-primary btn-lg mt-4">Join Next Batch</a>
           </div>
         </div>
       </div>
@@ -187,19 +197,19 @@
   <section class="cta-section py-5 my-5">
     <div class="container">
       <div class="cta-card glass p-5 rounded-4 text-center">
-        <h2 class="h3 fw-bold mb-3">Ready to Master MEAN Stack?</h2>
+        <h2 class="h3 fw-bold mb-3">Ready to Start Your Full-Stack Journey?</h2>
         <p class="lead text-muted mb-4">
-          Join hundreds of successful developers. Limited seats per batch.
+          Transform your career with industry-oriented MEAN stack training. Limited seats available.
         </p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
           <a routerLink="/contact" class="btn btn-primary btn-lg">
-            Reserve Your Seat Today
+            <span class="me-2">🚀</span>Reserve Your Seat
           </a>
-          <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary btn-lg">
-            Watch Free Videos
+          <a routerLink="/angular" class="btn btn-outline-primary btn-lg">
+            Explore Free Content
           </a>
         </div>
-        <p class="small text-muted mt-4">Next batch starts in 2 weeks. Early bird discount available.</p>
+        <p class="small text-muted mt-4">Next batch starts soon. Early registration recommended.</p>
       </div>
     </div>
   </section>

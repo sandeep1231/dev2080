@@ -29,39 +29,42 @@
 
             <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
               <div class="mb-3">
-                <label for="name" class="form-label fw-semibold">Full Name</label>
+                <label for="name" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
                 <input 
                   id="name" 
                   type="text" 
                   class="form-control" 
                   formControlName="name"
-                  placeholder="Your full name">
+                  placeholder="Your full name"
+                  required>
                 <div class="invalid-feedback d-block small mt-2" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
                   <span class="text-danger">✗</span> Name is required (minimum 2 characters)
                 </div>
               </div>
 
               <div class="mb-3">
-                <label for="email" class="form-label fw-semibold">Email Address</label>
+                <label for="email" class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
                 <input 
                   id="email" 
                   type="email" 
                   class="form-control" 
                   formControlName="email"
-                  placeholder="you@example.com">
+                  placeholder="you@example.com"
+                  required>
                 <div class="invalid-feedback d-block small mt-2" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
                   <span class="text-danger">✗</span> Please enter a valid email address
                 </div>
               </div>
 
               <div class="mb-3">
-                <label for="message" class="form-label fw-semibold">Message</label>
+                <label for="message" class="form-label fw-semibold">Message <span class="text-danger">*</span></label>
                 <textarea 
                   id="message" 
                   rows="5" 
                   class="form-control" 
                   formControlName="message"
-                  placeholder="Tell us about yourself, your goals, or any questions..."></textarea>
+                  placeholder="Tell us about yourself, your goals, or any questions..."
+                  required></textarea>
                 <div class="invalid-feedback d-block small mt-2" *ngIf="form.get('message')?.touched && form.get('message')?.invalid">
                   <span class="text-danger">✗</span> Please enter at least 10 characters
                 </div>
@@ -118,10 +121,10 @@
           <div class="border-top pt-4">
             <h3 class="h6 fw-bold mb-3">Quick Access</h3>
             <div class="d-grid gap-2">
-              <a class="btn btn-success" href="https://wa.me/" target="_blank" rel="noopener">
+              <a class="btn btn-success" href="https://wa.me/919778177995" target="_blank" rel="noopener">
                 <span class="me-2">💬</span>Chat on WhatsApp
               </a>
-              <a class="btn btn-outline-primary" href="mailto:contact@example.com">
+              <a class="btn btn-outline-primary" href="mailto:meanstackexpert@gmail.com">
                 <span class="me-2">📧</span>Email Us
               </a>
             </div>
