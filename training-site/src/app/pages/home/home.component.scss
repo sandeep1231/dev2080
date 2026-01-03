@@ -2,6 +2,13 @@
 
 .home-container {
 	overflow: hidden;
+	opacity: 1 !important;
+	visibility: visible !important;
+	animation: none !important;
+	
+	* {
+		animation-play-state: running !important;
+	}
 }
 
 // Hero Section
@@ -9,9 +16,12 @@
 	position: relative;
 	margin: 0 -1rem;
 	padding: 5rem 1rem;
-	min-height: 100vh;
+	min-height: auto;
 	display: flex;
 	align-items: center;
+	opacity: 1 !important;
+	visibility: visible !important;
+	animation: none !important;
 
 	.hero-background {
 		position: absolute;
@@ -25,6 +35,8 @@
 
 	.hero-content {
 		z-index: 1;
+		opacity: 1 !important;
+		visibility: visible !important;
 
 		.badge {
 			font-size: 0.875rem;
@@ -66,6 +78,8 @@
 // Code Window Visual
 .hero-visual {
 	animation: float 6s ease-in-out infinite;
+	opacity: 1 !important;
+	visibility: visible !important;
 
 	@keyframes float {
 		0%, 100% { transform: translateY(0px); }
@@ -78,6 +92,8 @@
 	border-radius: 1rem;
 	overflow: hidden;
 	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+	opacity: 1 !important;
+	visibility: visible !important;
 
 	.window-header {
 		display: flex;
@@ -100,21 +116,74 @@
 	.window-code {
 		padding: 1.5rem;
 		font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-		font-size: 0.95rem;
-		line-height: 1.8;
+		font-size: 1rem;
+		line-height: 2;
 		color: #e2e8f0;
 		overflow-x: auto;
+		min-height: 200px;
 
 		code {
 			display: block;
 			white-space: pre;
+			position: relative;
 		}
 
-		.comment { color: #64748b; }
-		.keyword { color: #818cf8; font-weight: 600; }
-		.class { color: #10b981; }
-		.method { color: #06b6d4; }
-		.string { color: #f97316; }
+		.typing-code {
+			margin: 0;
+			padding: 0;
+			font-family: inherit;
+			white-space: pre-wrap;
+			word-wrap: break-word;
+			display: inline;
+		}
+
+		.cursor {
+			display: inline-block;
+			width: 10px;
+			height: 1.4em;
+			background-color: #10b981;
+			animation: blink 0.8s step-end infinite;
+			margin-left: 2px;
+			vertical-align: text-bottom;
+			box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+		}
+
+		@keyframes blink {
+			0%, 49% { opacity: 1; }
+			50%, 100% { opacity: 0; }
+		}
+
+		.comment { 
+			color: #5c6370; 
+			font-style: italic;
+		}
+		.keyword { 
+			color: #c678dd; 
+			font-weight: 600; 
+		}
+		.keyword-new { 
+			color: #61afef; 
+			font-weight: 600; 
+		}
+		.variable { 
+			color: #e06c75;
+			font-weight: 500; 
+		}
+		.class { 
+			color: #98c379;
+			font-weight: 600; 
+		}
+		.method { 
+			color: #61afef;
+			font-weight: 500; 
+		}
+		.string-orange { 
+			color: #e5c07b;
+			font-weight: 400; 
+		}
+		.punctuation { 
+			color: #abb2bf;
+		}
 	}
 }
 

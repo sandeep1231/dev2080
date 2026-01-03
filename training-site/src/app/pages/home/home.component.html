@@ -1,11 +1,11 @@
 <div class="home-container">
   <!-- Hero Section -->
-  <section class="hero-section fade-in">
+  <section class="hero-section">
     <div class="hero-background"></div>
     <div class="container position-relative">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
-          <div class="hero-content slide-in-left">
+          <div class="hero-content">
             <span class="badge bg-light text-primary mb-3">Master MEAN Stack in 8-12 Weeks</span>
             <h1 class="display-4 fw-bold mb-4 lh-1">
               Build Full-Stack Web Apps with 
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="hero-visual fade-in">
+          <div class="hero-visual">
             <div class="code-window">
               <div class="window-header">
                 <span class="dot red"></span>
@@ -34,12 +34,35 @@
               </div>
               <div class="window-code">
                 <code>
-                  <span class="comment">// Build amazing full-stack apps</span><br>
-                  <span class="keyword">const</span> app = <span class="keyword">new</span> <span class="class">MEANStack</span>();<br>
-                  app.<span class="method">learn</span>(<span class="string">'Angular'</span>)<br>
-                  &nbsp;&nbsp;.<span class="method">with</span>(<span class="string">'Node.js'</span>)<br>
-                  &nbsp;&nbsp;.<span class="method">andDatabase</span>(<span class="string">'MongoDB'</span>);<br>
-                  <span class="keyword">await</span> app.<span class="method">deploy</span>();
+                  <span class="comment">{{ displayLines[0] }}</span><span class="cursor" *ngIf="currentLine === 0">|</span>
+                  <br *ngIf="currentLine > 0">
+                  <span class="keyword">{{ displayLines[1]?.substring(0, 5) }}</span>
+                  <span class="variable">{{ displayLines[1]?.substring(5, 9) }}</span>
+                  <span>{{ displayLines[1]?.substring(9, 12) }}</span>
+                  <span class="keyword-new">{{ displayLines[1]?.substring(12, 15) }}</span>
+                  <span class="class">{{ displayLines[1]?.substring(15) }}</span><span class="cursor" *ngIf="currentLine === 1">|</span>
+                  <br *ngIf="currentLine > 1">
+                  <span class="variable">{{ displayLines[2]?.substring(0, 3) }}</span>
+                  <span class="punctuation">{{ displayLines[2]?.substring(3, 4) }}</span>
+                  <span class="method">{{ displayLines[2]?.substring(4, 9) }}</span>
+                  <span class="punctuation">{{ displayLines[2]?.substring(9, 10) }}</span>
+                  <span class="string-orange">{{ displayLines[2]?.substring(10) }}</span><span class="cursor" *ngIf="currentLine === 2">|</span>
+                  <br *ngIf="currentLine > 2">
+                  <span>{{ displayLines[3]?.substring(0, 2) }}</span>
+                  <span class="punctuation">{{ displayLines[3]?.substring(2, 3) }}</span>
+                  <span class="method">{{ displayLines[3]?.substring(3, 7) }}</span>
+                  <span class="punctuation">{{ displayLines[3]?.substring(7, 8) }}</span>
+                  <span class="string-orange">{{ displayLines[3]?.substring(8) }}</span><span class="cursor" *ngIf="currentLine === 3">|</span>
+                  <br *ngIf="currentLine > 3">
+                  <span>{{ displayLines[4]?.substring(0, 2) }}</span>
+                  <span class="punctuation">{{ displayLines[4]?.substring(2, 3) }}</span>
+                  <span class="method">{{ displayLines[4]?.substring(3, 14) }}</span>
+                  <span class="punctuation">{{ displayLines[4]?.substring(14, 15) }}</span>
+                  <span class="string-orange">{{ displayLines[4]?.substring(15) }}</span><span class="cursor" *ngIf="currentLine === 4">|</span>
+                  <br *ngIf="currentLine > 4">
+                  <span class="keyword">{{ displayLines[5]?.substring(0, 5) }}</span>
+                  <span class="variable">{{ displayLines[5]?.substring(5, 9) }}</span>
+                  <span class="method">{{ displayLines[5]?.substring(9) }}</span><span class="cursor" *ngIf="currentLine === 5">|</span>
                 </code>
               </div>
             </div>
