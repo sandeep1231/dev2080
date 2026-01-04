@@ -43,9 +43,8 @@ $gradient-warm: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
 	--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-* {
-	transition: var(--transition);
-}
+// Removed global * transition for performance
+// Transitions are now applied selectively to interactive elements
 
 html {
 	scroll-behavior: smooth;
@@ -331,9 +330,9 @@ input, textarea, select {
 
 // Hero section baseline
 .hero {
-	background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+	background: #ffffff;
 	border-radius: var(--radius-2xl);
-	padding: 3rem 2rem;
+	padding: 4rem 2rem;
 }
 
 // Section separator
