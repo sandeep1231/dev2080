@@ -187,6 +187,33 @@
 	}
 }
 
+// Why MEAN Stack Section
+.why-mean-section {
+	position: relative;
+	overflow: hidden;
+
+	.feature-card {
+		transition: all 0.3s ease;
+		border: 1px solid rgba(99, 102, 241, 0.1);
+
+		&:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 12px 24px rgba(99, 102, 241, 0.15) !important;
+			border-color: rgba(99, 102, 241, 0.3);
+		}
+
+		.feature-icon {
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			border-radius: 12px;
+			background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+		}
+	}
+}
+
 // Learning Section (Merged from Mentor & Curriculum)
 .learning-section {
 	background: linear-gradient(180deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
