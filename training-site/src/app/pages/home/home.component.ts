@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   currentLine = 0;
   private codeLines = [
     '// Build amazing full-stack apps',
-    'const app = new MANStack();',
+    'const app = new MEANStack();',
     'app.learn(\'Angular\')',
     '  .with(\'Node.js\')',
     '  .useDatabase(\'MongoDB\');',
