@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   displayLines: string[] = ['', '', '', '', '', ''];
   currentLine = 0;
   private codeLines = [
-    '// Build amazing full-stack apps',
+    '// Build amazing AI-Powered full-stack apps',
     'const app = new MEANStack();',
     'app.learn(\'Angular\')',
     '  .with(\'Node.js\')',
@@ -45,7 +45,10 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit() {
     // Video service commented out - enable when videos are ready
     // this.featured = this.videoService.getFeatured();
-    this.seo.set('MEAN Stack Training – Angular Node.js MongoDB', 'Project-based MEAN stack training covering Angular, Node.js, Express, and MongoDB with interview preparation.');
+    this.seo.set(
+      'MEAN Stack + AI-Powered Development Training – Angular Node.js MongoDB', 
+      'Learn MEAN Stack with AI-powered development tools. Master Angular, Node.js, MongoDB with ChatGPT and AI coding assistants. Interview preparation and real projects included.'
+    );
   }
 
   ngAfterViewInit() {

@@ -115,6 +115,28 @@
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 		transition: all 0.3s ease;
+		
+		.ai-badge {
+			display: inline-block;
+			margin-left: 0.4rem;
+			padding: 0.15rem 0.5rem;
+			font-size: 0.7rem;
+			font-weight: 800;
+			letter-spacing: 0.05em;
+			background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			border: 1.5px solid transparent;
+			border-radius: 0.35rem;
+			background-image: linear-gradient(white, white), linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+			background-origin: border-box;
+			background-clip: padding-box, border-box;
+			-webkit-text-fill-color: #6366f1;
+			vertical-align: middle;
+			position: relative;
+			top: -1px;
+		}
 	}
 }
 
