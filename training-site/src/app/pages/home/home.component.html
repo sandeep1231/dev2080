@@ -1,432 +1,320 @@
-<div class="home-container">
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-bg-pattern"></div>
+﻿<div class="home-container">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-noise"></div>
+    </div>
     <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <div class="hero-content">
-            <span class="section-heading">
-              <span class="section-badge">AI-Powered Engineering Training — Live Cohorts</span>
-            </span>
-            <h1 class="display-4 fw-bold mb-4 lh-1">
-              Master the 20% of Skills That Deliver <span class="gradient-text">80% of Impact</span>
-            </h1>
-            <p class="lead text-muted mb-4">
-              <strong>Angular • React • Node.js • AI Tools • System Design • Real Projects</strong>
-            </p>
-            <p class="text-muted mb-4">
-              Stop learning syntax. Start building like a senior engineer. Hands-on training with AI-powered workflows, taught by a consultant with 10+ years in enterprise tech.
-            </p>
-            <div class="d-flex gap-3 flex-wrap">
-              <a routerLink="/contact" class="btn btn-primary btn-lg">
-                Start Your Upgrade
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-              <a routerLink="/angular" class="btn btn-outline-primary btn-lg">
-                Explore Free Content
-              </a>
-            </div>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-badge">
+            <span class="badge-pulse"></span>
+            AI-Powered Engineering Training
+          </span>
+          <h1 class="hero-title">
+            Master the 20% of Skills That Deliver
+            <span class="hero-gradient">80% of Impact</span>
+          </h1>
+          <p class="hero-sub">
+            Stop learning syntax. Start building like a senior engineer. Live cohort training with AI-powered workflows, taught by a consultant with 10+ years in enterprise tech.
+          </p>
+          <div class="hero-stack">
+            <span class="stack-chip">Angular</span>
+            <span class="stack-chip">Node.js</span>
+            <span class="stack-chip">MongoDB</span>
+            <span class="stack-chip">AI Tools</span>
+            <span class="stack-chip">System Design</span>
+          </div>
+          <div class="hero-actions">
+            <a routerLink="/contact" class="btn btn-primary btn-lg">
+              Start Your Upgrade
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a routerLink="/angular" class="btn btn-outline-primary btn-lg">
+              Explore Free Content
+            </a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="hero-visual">
-            <div class="code-window">
-              <div class="window-header">
+        <div class="hero-visual">
+          <div class="code-window">
+            <div class="window-header">
+              <div class="window-dots">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
-                <span class="window-title">AI-Assisted Development</span>
               </div>
-              <div class="window-code">
-                <code>
-                  <span class="comment">{{ displayLines[0] }}</span><span class="cursor" *ngIf="currentLine === 0">|</span>
-                  <br *ngIf="currentLine > 0">
-                  <span class="keyword">{{ displayLines[1]?.substring(0, 6) }}</span>
-                  <span class="variable">{{ displayLines[1]?.substring(6, 14) }}</span>
-                  <span>{{ displayLines[1]?.substring(14, 17) }}</span>
-                  <span class="class">{{ displayLines[1]?.substring(17) }}</span><span class="cursor" *ngIf="currentLine === 1">|</span>
-                  <br *ngIf="currentLine > 1">
-                  <span class="variable">{{ displayLines[2]?.substring(0, 9) }}</span>
-                  <span class="punctuation">{{ displayLines[2]?.substring(9, 10) }}</span>
-                  <span class="method">{{ displayLines[2]?.substring(10) }}</span><span class="cursor" *ngIf="currentLine === 2">|</span>
-                  <br *ngIf="currentLine > 2">
-                  <span class="string-orange">{{ displayLines[3] }}</span><span class="cursor" *ngIf="currentLine === 3">|</span>
-                  <br *ngIf="currentLine > 3">
-                  <span class="string-orange">{{ displayLines[4] }}</span><span class="cursor" *ngIf="currentLine === 4">|</span>
-                  <br *ngIf="currentLine > 4">
-                  <span class="class">{{ displayLines[5] }}</span><span class="cursor" *ngIf="currentLine === 5">|</span>
-                </code>
-              </div>
+              <span class="window-title">AI-Assisted Development</span>
+            </div>
+            <div class="window-code">
+              <code>
+                <span class="comment">{{ displayLines[0] }}</span><span class="cursor" *ngIf="currentLine === 0">|</span>
+                <br *ngIf="currentLine > 0">
+                <span class="keyword">{{ displayLines[1]?.substring(0, 6) }}</span>
+                <span class="variable">{{ displayLines[1]?.substring(6, 14) }}</span>
+                <span>{{ displayLines[1]?.substring(14, 17) }}</span>
+                <span class="class">{{ displayLines[1]?.substring(17) }}</span><span class="cursor" *ngIf="currentLine === 1">|</span>
+                <br *ngIf="currentLine > 1">
+                <span class="variable">{{ displayLines[2]?.substring(0, 9) }}</span>
+                <span class="punctuation">{{ displayLines[2]?.substring(9, 10) }}</span>
+                <span class="method">{{ displayLines[2]?.substring(10) }}</span><span class="cursor" *ngIf="currentLine === 2">|</span>
+                <br *ngIf="currentLine > 2">
+                <span class="string-orange">{{ displayLines[3] }}</span><span class="cursor" *ngIf="currentLine === 3">|</span>
+                <br *ngIf="currentLine > 3">
+                <span class="string-orange">{{ displayLines[4] }}</span><span class="cursor" *ngIf="currentLine === 4">|</span>
+                <br *ngIf="currentLine > 4">
+                <span class="class">{{ displayLines[5] }}</span><span class="cursor" *ngIf="currentLine === 5">|</span>
+              </code>
             </div>
           </div>
+          <div class="code-glow"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <section class="trust-bar py-4">
+  <!-- METRICS BAR -->
+  <section class="metrics">
     <div class="container">
-      <div class="row g-4 text-center">
-        <div class="col-6 col-md-3">
-          <div class="trust-stat">
-            <div class="stat-number">10+</div>
-            <div class="stat-label">Years Industry Experience</div>
-          </div>
+      <div class="metrics-grid">
+        <div class="metric">
+          <span class="metric-value">10+</span>
+          <span class="metric-label">Years Experience</span>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="trust-stat">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Developers Trained</div>
-          </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-value">500+</span>
+          <span class="metric-label">Engineers Trained</span>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="trust-stat">
-            <div class="stat-number">4.9★</div>
-            <div class="stat-label">Student Rating</div>
-          </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-value">4.9&#9733;</span>
+          <span class="metric-label">Student Rating</span>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="trust-stat">
-            <div class="stat-number">15 max</div>
-            <div class="stat-label">Students Per Cohort</div>
-          </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-value">15 max</span>
+          <span class="metric-label">Per Cohort</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem → Solution Section -->
-  <section class="problem-section py-5 section-elevated">
+  <!-- PROBLEM / SOLUTION -->
+  <section class="compare">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <div class="section-heading" style="text-align: left">
-            <span class="section-badge">The Problem</span>
+      <div class="section-heading">
+        <span class="section-badge">The Problem We Solve</span>
+        <h2>Why 90% of Developers Stay Stuck at Mid-Level</h2>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card compare-old">
+          <div class="compare-header">
+            <span class="compare-icon compare-icon-bad">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </span>
+            <h3>The Old Way</h3>
           </div>
-          <h2 class="h2 fw-bold mb-3">Most courses teach syntax.<br>We teach <span class="gradient-text">engineering</span>.</h2>
-          <div class="problem-list">
-            <div class="problem-item">
-              <span class="icon-box icon-box-sm icon-danger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              </span>
-              <span>Watching 40-hour video courses that you never finish</span>
-            </div>
-            <div class="problem-item">
-              <span class="icon-box icon-box-sm icon-danger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              </span>
-              <span>Building todo apps that impress no one</span>
-            </div>
-            <div class="problem-item">
-              <span class="icon-box icon-box-sm icon-danger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              </span>
-              <span>Learning outdated patterns while AI changes everything</span>
-            </div>
-            <div class="problem-item">
-              <span class="icon-box icon-box-sm icon-danger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              </span>
-              <span>No mentorship, no code reviews, no real feedback</span>
-            </div>
-          </div>
+          <ul class="compare-list">
+            <li>Watch 200+ hours of random YouTube tutorials</li>
+            <li>Buy courses that collect dust &#8212; no accountability</li>
+            <li>Learn syntax but can't build real projects</li>
+            <li>No code reviews, no feedback, no mentorship</li>
+            <li>Fall behind as AI changes every engineering role</li>
+          </ul>
         </div>
-        <div class="col-lg-6">
-          <div class="section-heading" style="text-align: left">
-            <span class="section-badge" style="color: #10b981; background: rgba(16,185,129,0.06); border-color: rgba(16,185,129,0.15)">The Solution</span>
+        <div class="compare-card compare-new">
+          <div class="compare-header">
+            <span class="compare-icon compare-icon-good">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <h3>The Dev2080 Way</h3>
           </div>
-          <h3 class="h4 fw-bold mb-3">Learn like you work — with AI, real projects & expert mentorship</h3>
-          <div class="solution-list">
-            <div class="solution-item">
-              <span class="icon-box icon-box-sm icon-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>Live cohort training with a senior consultant — not pre-recorded fluff</span>
-            </div>
-            <div class="solution-item">
-              <span class="icon-box icon-box-sm icon-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>AI-first workflow — learn WITH Copilot & ChatGPT from day one</span>
-            </div>
-            <div class="solution-item">
-              <span class="icon-box icon-box-sm icon-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>Enterprise-grade projects that actually belong on your resume</span>
-            </div>
-            <div class="solution-item">
-              <span class="icon-box icon-box-sm icon-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>1-on-1 code reviews, architecture feedback & career coaching</span>
-            </div>
-          </div>
+          <ul class="compare-list">
+            <li>Learn the critical 20% that delivers 80% of results</li>
+            <li>Live cohorts with 15 max students &#8212; weekly accountability</li>
+            <li>Build enterprise-grade projects with code reviews</li>
+            <li>Personal mentorship from a senior consultant</li>
+            <li>Master AI-powered workflows used by top engineers</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Learning Tracks Section -->
-  <section class="tracks-section py-5 section-soft">
+  <!-- LEARNING TRACKS BENTO -->
+  <section class="tracks">
     <div class="container">
       <div class="section-heading">
         <span class="section-badge">Learning Tracks</span>
-        <h2 class="h2 fw-bold">Choose Your Upgrade Path</h2>
-        <p class="section-desc">Structured learning tracks designed for real career growth — not random tutorials</p>
+        <h2>Choose Your Engineering Path</h2>
+        <p class="section-desc">Each track is designed around the Pareto principle &#8212; learn the 20% of skills that will give you 80% of career results.</p>
       </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <a routerLink="/angular" class="card-link">
-            <div class="track-card h-100">
-              <div class="icon-box icon-box-lg icon-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-              </div>
-              <h3 class="h5 fw-bold">Modern Web Development</h3>
-              <p class="small text-muted">Angular, React, Node.js, TypeScript, REST APIs, microservices architecture</p>
-              <div class="track-tags">
-                <span class="tag">Angular</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">APIs</span>
-              </div>
-              <span class="track-cta">Explore Track
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="track-card h-100 featured">
-            <div class="featured-badge">Most Popular</div>
-            <div class="icon-box icon-box-lg icon-purple">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <h3 class="h5 fw-bold">AI-Powered Development</h3>
-            <p class="small text-muted">GitHub Copilot, ChatGPT workflows, prompt engineering, AI-assisted debugging & code review</p>
-            <div class="track-tags">
-              <span class="tag">Copilot</span>
-              <span class="tag">ChatGPT</span>
-              <span class="tag">Prompts</span>
-            </div>
-            <span class="track-cta">Coming Soon</span>
+      <div class="tracks-bento">
+        <a routerLink="/angular" class="track track-featured">
+          <div class="track-glow"></div>
+          <span class="track-badge">Core Track</span>
+          <div class="track-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a routerLink="/resources" class="card-link">
-            <div class="track-card h-100">
-              <div class="icon-box icon-box-lg icon-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-              </div>
-              <h3 class="h5 fw-bold">Real Project Engineering</h3>
-              <p class="small text-muted">Build enterprise-grade SaaS apps, e-commerce platforms, and portfolio projects with CI/CD</p>
-              <div class="track-tags">
-                <span class="tag">Full-Stack</span>
-                <span class="tag">Enterprise</span>
-                <span class="tag">DevOps</span>
-              </div>
-              <span class="track-cta">View Projects
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-6">
-          <div class="track-card h-100">
-            <div class="icon-box icon-box-lg icon-warning">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h3 class="h5 fw-bold">Career Upgrade</h3>
-            <p class="small text-muted">System design, architecture thinking, technical interview mastery, salary negotiation, resume building</p>
-            <div class="track-tags">
-              <span class="tag">System Design</span>
-              <span class="tag">Interviews</span>
-              <span class="tag">Architecture</span>
-            </div>
-            <span class="track-cta">Coming Soon</span>
+          <h3>Modern Web Development</h3>
+          <p>Full-stack Angular + Node.js + MongoDB. Build enterprise-grade SPAs and APIs from scratch.</p>
+          <div class="track-tags">
+            <span>Angular</span><span>Node.js</span><span>MongoDB</span><span>TypeScript</span>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-6">
-          <div class="track-card h-100">
-            <div class="icon-box icon-box-lg icon-info">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h3 class="h5 fw-bold">Engineering Productivity</h3>
-            <p class="small text-muted">10x developer workflows with AI, Git mastery, CI/CD, VS Code power usage, technical documentation</p>
-            <div class="track-tags">
-              <span class="tag">Workflow</span>
-              <span class="tag">Git</span>
-              <span class="tag">AI Tools</span>
-            </div>
-            <span class="track-cta">Coming Soon</span>
+          <span class="track-cta">Start Learning <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <div class="track track-highlight">
+          <span class="track-popular">Most Popular</span>
+          <div class="track-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
+          <h3>AI-Powered Development</h3>
+          <p>Code 5x faster with GitHub Copilot, ChatGPT, and AI engineering workflows.</p>
+          <div class="track-tags">
+            <span>Copilot</span><span>ChatGPT</span><span>Prompts</span>
+          </div>
+          <span class="track-cta muted">Coming Soon</span>
+        </div>
+        <div class="track">
+          <div class="track-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Real Project Engineering</h3>
+          <p>Build 3 production-ready projects with CI/CD, testing, and deployment.</p>
+          <div class="track-tags">
+            <span>CI/CD</span><span>Testing</span><span>Docker</span>
+          </div>
+          <span class="track-cta muted">Coming Soon</span>
+        </div>
+        <div class="track">
+          <div class="track-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Career Upgrade</h3>
+          <p>System design, interviews, resume building, and salary negotiation.</p>
+          <div class="track-tags">
+            <span>System Design</span><span>Interviews</span>
+          </div>
+          <span class="track-cta muted">Coming Soon</span>
+        </div>
+        <div class="track">
+          <div class="track-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Engineering Productivity</h3>
+          <p>VS Code mastery, terminal workflows, debugging, and tooling optimization.</p>
+          <div class="track-tags">
+            <span>VS Code</span><span>Terminal</span><span>AI Tools</span>
+          </div>
+          <span class="track-cta muted">Coming Soon</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How It Works Section -->
-  <section class="how-it-works-section py-5 section-elevated">
+  <!-- HOW IT WORKS -->
+  <section class="process">
     <div class="container">
       <div class="section-heading">
         <span class="section-badge">How It Works</span>
-        <h2 class="h2 fw-bold">From Beginner to Senior Engineer in 4 Steps</h2>
+        <h2>From Beginner to Senior in 4 Steps</h2>
       </div>
-      <div class="row g-4">
-        <div class="col-sm-6 col-lg-3">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <h4 class="h6 fw-bold">Pick Your Track</h4>
-            <p class="small text-muted mb-0">Choose a learning path based on your current level and career goals</p>
-          </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="step-num">01</span>
+          <h4>Pick Your Track</h4>
+          <p>Choose a path based on your level and career goals</p>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <h4 class="h6 fw-bold">Learn with AI</h4>
-            <p class="small text-muted mb-0">Master concepts using AI-assisted coding workflows in live sessions</p>
-          </div>
+        <div class="process-connector"><svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" opacity="0.3"/></svg></div>
+        <div class="process-step">
+          <span class="step-num">02</span>
+          <h4>Learn with AI</h4>
+          <p>Master concepts using AI-assisted coding in live sessions</p>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <h4 class="h6 fw-bold">Build Real Projects</h4>
-            <p class="small text-muted mb-0">Create enterprise-grade applications with code reviews & mentorship</p>
-          </div>
+        <div class="process-connector"><svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" opacity="0.3"/></svg></div>
+        <div class="process-step">
+          <span class="step-num">03</span>
+          <h4>Build Real Projects</h4>
+          <p>Create enterprise-grade apps with code reviews &amp; mentorship</p>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="step-card">
-            <div class="step-number">04</div>
-            <h4 class="h6 fw-bold">Upgrade Your Career</h4>
-            <p class="small text-muted mb-0">Interview prep, portfolio building, and lifetime community support</p>
-          </div>
+        <div class="process-connector"><svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" opacity="0.3"/></svg></div>
+        <div class="process-step">
+          <span class="step-num">04</span>
+          <h4>Upgrade Your Career</h4>
+          <p>Interview prep, portfolio building &amp; lifetime community</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- AI Showcase Section -->
-  <section class="ai-showcase-section py-5 section-gradient">
+  <!-- AI SHOWCASE -->
+  <section class="ai-showcase">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-5">
           <div class="section-heading" style="text-align: left">
             <span class="section-badge">AI-First Learning</span>
           </div>
-          <h2 class="h2 fw-bold mb-3">See How AI Changes Your <span class="gradient-text">Development Workflow</span></h2>
-          <p class="text-muted mb-4">
-            Every course teaches you to work WITH AI tools — not just about them. This is the skill gap most developers are missing in 2026.
-          </p>
-          <ul class="ai-benefits list-unstyled">
-            <li class="mb-3 d-flex align-items-start gap-3">
-              <span class="icon-box icon-box-sm icon-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>Write production code 5x faster with GitHub Copilot</span>
-            </li>
-            <li class="mb-3 d-flex align-items-start gap-3">
-              <span class="icon-box icon-box-sm icon-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>Debug complex issues in minutes, not hours</span>
-            </li>
-            <li class="mb-3 d-flex align-items-start gap-3">
-              <span class="icon-box icon-box-sm icon-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>Generate tests, docs & architecture diagrams with AI</span>
-            </li>
-            <li class="mb-3 d-flex align-items-start gap-3">
-              <span class="icon-box icon-box-sm icon-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>Learn prompt engineering for real engineering tasks</span>
-            </li>
-            <li class="d-flex align-items-start gap-3">
-              <span class="icon-box icon-box-sm icon-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span>Use AI as your senior developer pair — 24/7</span>
-            </li>
+          <h2 class="mb-3">See How AI Changes Your <span class="gradient-text">Development Workflow</span></h2>
+          <p class="text-muted mb-4">Every course teaches you to work WITH AI tools &#8212; not just about them. This is the skill gap most developers are missing in 2026.</p>
+          <ul class="ai-perks">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Write production code 5x faster with GitHub Copilot</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Debug complex issues in minutes, not hours</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Generate tests, docs &amp; architecture diagrams</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Prompt engineering for real engineering tasks</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AI as your senior dev pair &#8212; 24/7</li>
           </ul>
         </div>
         <div class="col-lg-7">
-          <div class="ai-demo-card">
-            <div class="demo-header">
-              <span class="demo-tab" [class.active]="activeTab() === 'with'" (click)="activeTab.set('with')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <div class="demo-card">
+            <div class="demo-tabs">
+              <button class="demo-tab" [class.active]="activeTab() === 'with'" (click)="activeTab.set('with')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                 With AI
-              </span>
-              <span class="demo-tab" [class.active]="activeTab() === 'without'" (click)="activeTab.set('without')">Without AI</span>
+              </button>
+              <button class="demo-tab" [class.active]="activeTab() === 'without'" (click)="activeTab.set('without')">Without AI</button>
             </div>
             @if (activeTab() === 'with') {
-            <div class="demo-content">
+            <div class="demo-body">
               <div class="demo-prompt">
                 <span class="prompt-label">Developer Prompt:</span>
                 <p class="prompt-text">"Create an Angular auth service with JWT handling, HTTP interceptor, and route guards"</p>
               </div>
               <div class="demo-result">
-                <span class="result-label">AI Result:</span>
+                <span class="result-label success">AI Result:</span>
                 <div class="result-items">
-                  <div class="result-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2"><polyline points="20 6 9 17 4 12"/></svg>
-                    AuthService with login/logout/refresh
-                  </div>
-                  <div class="result-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2"><polyline points="20 6 9 17 4 12"/></svg>
-                    JWT HttpInterceptor with auto-refresh
-                  </div>
-                  <div class="result-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2"><polyline points="20 6 9 17 4 12"/></svg>
-                    AuthGuard with role-based access
-                  </div>
-                  <div class="result-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2"><polyline points="20 6 9 17 4 12"/></svg>
-                    Unit tests for all components
-                  </div>
+                  <div class="result-item"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AuthService with login/logout/refresh</div>
+                  <div class="result-item"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> JWT HttpInterceptor with auto-refresh</div>
+                  <div class="result-item"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AuthGuard with role-based access</div>
+                  <div class="result-item"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unit tests for all components</div>
                 </div>
-                <div class="time-comparison mt-3">
-                  <span class="time-badge fast">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    3 minutes with AI
-                  </span>
-                  <span class="time-badge slow">2+ hours manually</span>
+                <div class="time-badges">
+                  <span class="tbadge tbadge-fast"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> 3 min with AI</span>
+                  <span class="tbadge tbadge-slow">2+ hrs manually</span>
                 </div>
               </div>
             </div>
             } @else {
-            <div class="demo-content">
+            <div class="demo-body">
               <div class="demo-prompt">
                 <span class="prompt-label">Traditional Approach:</span>
                 <p class="prompt-text">"Create an Angular auth service with JWT handling, HTTP interceptor, and route guards"</p>
               </div>
               <div class="demo-result">
-                <span class="result-label without">Manual Steps:</span>
+                <span class="result-label warning">Manual Steps:</span>
                 <div class="result-items">
-                  <div class="result-item without-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                    Research JWT best practices &amp; Angular patterns
-                  </div>
-                  <div class="result-item without-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                    Write AuthService from scratch, debug token flow
-                  </div>
-                  <div class="result-item without-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                    Build interceptor, handle edge cases manually
-                  </div>
-                  <div class="result-item without-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                    Write &amp; debug route guards + unit tests
-                  </div>
+                  <div class="result-item dim"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Research JWT best practices &amp; Angular patterns</div>
+                  <div class="result-item dim"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Write AuthService from scratch, debug token flow</div>
+                  <div class="result-item dim"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Build interceptor, handle edge cases manually</div>
+                  <div class="result-item dim"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Write &amp; debug route guards + unit tests</div>
                 </div>
-                <div class="time-comparison mt-3">
-                  <span class="time-badge slow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-1"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    2+ hours manually
-                  </span>
-                  <span class="time-badge fast">3 minutes with AI</span>
+                <div class="time-badges">
+                  <span class="tbadge tbadge-slow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2+ hrs manually</span>
+                  <span class="tbadge tbadge-fast">3 min with AI</span>
                 </div>
               </div>
             </div>
@@ -437,154 +325,94 @@
     </div>
   </section>
 
-  <!-- Instructor Section -->
-  <section class="instructor-section py-5 section-elevated">
+  <!-- INSTRUCTOR -->
+  <section class="instructor">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-4 text-center">
-          <div class="instructor-avatar">
-            <div class="avatar-ring">
-              <div class="avatar-placeholder">
-                <span>SP</span>
-              </div>
-            </div>
-            <div class="avatar-label">Senior Consultant</div>
+      <div class="instructor-grid">
+        <div class="instructor-portrait">
+          <div class="portrait-ring">
+            <div class="portrait-inner"><span>SP</span></div>
           </div>
+          <span class="portrait-label">Senior Consultant</span>
         </div>
-        <div class="col-lg-8">
-          <div class="section-heading" style="text-align: left">
-            <span class="section-badge">Your Instructor</span>
-          </div>
-          <h2 class="h3 fw-bold mb-3">Taught by a Senior Consultant, Not a YouTuber</h2>
-          <p class="text-muted mb-4">
-            With 10+ years in enterprise technology — including Angular, SAP Spartacus, Node.js, and modern architecture — I don't just teach tutorials. I teach how real engineering teams build, ship, and scale software.
-          </p>
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <div class="credential-item">
-                <span class="icon-box icon-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                </span>
-                <div>
-                  <strong>Senior Consultant</strong>
-                  <p class="small text-muted mb-0">Enterprise architecture & delivery</p>
-                </div>
-              </div>
+        <div class="instructor-info">
+          <span class="section-badge">Your Instructor</span>
+          <h2>Taught by a Senior Consultant, Not a YouTuber</h2>
+          <p class="text-muted mb-4">With 10+ years in enterprise technology &#8212; including Angular, SAP Spartacus, Node.js, and modern architecture &#8212; I teach how real engineering teams build, ship, and scale software.</p>
+          <div class="cred-grid">
+            <div class="cred">
+              <span class="cred-icon cred-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+              <div><strong>Senior Consultant</strong><span>Enterprise architecture</span></div>
             </div>
-            <div class="col-sm-6">
-              <div class="credential-item">
-                <span class="icon-box icon-purple">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                </span>
-                <div>
-                  <strong>Angular & Node Expert</strong>
-                  <p class="small text-muted mb-0">10+ years of hands-on experience</p>
-                </div>
-              </div>
+            <div class="cred">
+              <span class="cred-icon cred-purple"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+              <div><strong>Angular &amp; Node Expert</strong><span>10+ years hands-on</span></div>
             </div>
-            <div class="col-sm-6">
-              <div class="credential-item">
-                <span class="icon-box icon-info">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </span>
-                <div>
-                  <strong>AI-First Practitioner</strong>
-                  <p class="small text-muted mb-0">Uses AI tools in daily engineering</p>
-                </div>
-              </div>
+            <div class="cred">
+              <span class="cred-icon cred-cyan"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+              <div><strong>AI-First Practitioner</strong><span>Daily AI workflows</span></div>
             </div>
-            <div class="col-sm-6">
-              <div class="credential-item">
-                <span class="icon-box icon-success">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </span>
-                <div>
-                  <strong>500+ Engineers Trained</strong>
-                  <p class="small text-muted mb-0">From freshers to senior roles</p>
-                </div>
-              </div>
+            <div class="cred">
+              <span class="cred-icon cred-green"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              <div><strong>500+ Trained</strong><span>Freshers to seniors</span></div>
             </div>
           </div>
-          <a routerLink="/about" class="btn btn-outline-primary mt-4">Learn More About Me
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
+          <a routerLink="/about" class="btn btn-outline-primary mt-4">Learn More About Me <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials-section py-5 section-soft">
+  <!-- TESTIMONIALS -->
+  <section class="reviews">
     <div class="container">
       <div class="section-heading">
         <span class="section-badge">Student Results</span>
-        <h2 class="h2 fw-bold">Engineers Who Upgraded Their Careers</h2>
+        <h2>Engineers Who Upgraded Their Careers</h2>
       </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="testimonial-card">
-            <div class="stars mb-2">★★★★★</div>
-            <p class="testimonial-text">"The AI-first approach completely changed how I write code. I went from spending hours on boilerplate to shipping features in minutes. Got promoted to senior within 6 months."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">RK</div>
-              <div>
-                <strong>Rahul K.</strong>
-                <p class="small text-muted mb-0">Junior → Senior Developer</p>
-              </div>
-            </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"The AI-first approach completely changed how I write code. I went from spending hours on boilerplate to shipping features in minutes. Got promoted to senior within 6 months."</p>
+          <div class="review-author">
+            <span class="review-avatar">RK</span>
+            <div><strong>Rahul K.</strong><span>Junior &#8594; Senior Developer</span></div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="testimonial-card">
-            <div class="stars mb-2">★★★★★</div>
-            <p class="testimonial-text">"Unlike Udemy courses that collect dust, this live cohort kept me accountable. The mentor reviewed my actual code and taught me enterprise patterns I now use daily."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">PS</div>
-              <div>
-                <strong>Priya S.</strong>
-                <p class="small text-muted mb-0">Fresher → Full-Stack Engineer</p>
-              </div>
-            </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Unlike Udemy courses that collect dust, this live cohort kept me accountable. The mentor reviewed my actual code and taught me enterprise patterns I now use daily."</p>
+          <div class="review-author">
+            <span class="review-avatar">PS</span>
+            <div><strong>Priya S.</strong><span>Fresher &#8594; Full-Stack Engineer</span></div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="testimonial-card">
-            <div class="stars mb-2">★★★★★</div>
-            <p class="testimonial-text">"The system design & interview prep sessions were game-changers. Cleared interviews at 3 product companies. The small batch size meant I got personal attention."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">AV</div>
-              <div>
-                <strong>Arun V.</strong>
-                <p class="small text-muted mb-0">3 YOE → Product Company SDE-2</p>
-              </div>
-            </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"The system design &amp; interview prep sessions were game-changers. Cleared interviews at 3 product companies. The small batch size meant I got personal attention."</p>
+          <div class="review-author">
+            <span class="review-avatar">AV</span>
+            <div><strong>Arun V.</strong><span>3 YOE &#8594; Product Company SDE-2</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA Section -->
-  <section class="cta-section py-5 my-5">
+  <!-- FINAL CTA -->
+  <section class="final-cta">
     <div class="container">
-      <div class="cta-card p-5 rounded-4 text-center">
-        <h2 class="h3 fw-bold mb-3">Ready to Master the Skills That Actually Matter?</h2>
-        <p class="lead text-muted mb-2">
-          Small cohorts. Real projects. AI-powered workflows. Expert mentorship.
-        </p>
-        <p class="text-muted mb-4">
-          <strong>Next cohort: Limited to 15 seats</strong> — Weekend classes (Sat & Sun) for 8–12 weeks
-        </p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a routerLink="/contact" class="btn btn-primary btn-lg">
-            Start Your Upgrade
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="https://wa.me/919778177995" target="_blank" rel="noopener" class="btn btn-outline-primary btn-lg">
-            Chat on WhatsApp
-          </a>
+      <div class="cta-box">
+        <div class="cta-orb cta-orb-1"></div>
+        <div class="cta-orb cta-orb-2"></div>
+        <h2>Ready to Master the Skills That Actually Matter?</h2>
+        <p class="lead">Small cohorts. Real projects. AI-powered workflows. Expert mentorship.</p>
+        <p class="cta-detail"><strong>Next cohort: Limited to 15 seats</strong> &#8212; Weekend classes (Sat &amp; Sun) for 8&#8211;12 weeks</p>
+        <div class="cta-actions">
+          <a routerLink="/contact" class="btn btn-primary btn-lg">Start Your Upgrade <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="https://wa.me/919778177995" target="_blank" rel="noopener" class="btn btn-outline-primary btn-lg">Chat on WhatsApp</a>
         </div>
-        <p class="small text-muted mt-4">7-day money-back guarantee. No risk to try.</p>
+        <p class="cta-footnote">7-day money-back guarantee. No risk to try.</p>
       </div>
     </div>
   </section>
