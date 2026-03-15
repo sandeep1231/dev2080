@@ -106,3 +106,27 @@
 		}
 	}
 }
+// ─── Dark Mode ───
+:host-context(html.dark) {
+	.privacy-policy-page {
+		background: #0f172a;
+	}
+
+	.policy-section {
+		h2 { color: #f1f5f9; }
+		h3 { color: #e2e8f0; }
+		p { color: #94a3b8; }
+
+		.lead { color: #cbd5e1; }
+
+		.policy-list {
+			color: #94a3b8;
+			li strong { color: #f1f5f9; }
+		}
+
+		.contact-info {
+			background: #1e293b;
+			border-left-color: #818cf8;
+		}
+	}
+}

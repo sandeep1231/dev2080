@@ -1,35 +1,133 @@
 <div class="learning-container">
   <!-- Page Header -->
   <section class="page-header py-5 mb-5">
+    <div class="hero-bg-dots"></div>
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-8">
-          <span class="badge bg-light text-primary mb-3">Complete Node.js & Express + AI Tools</span>
+          <div class="section-heading" style="text-align: left; margin-bottom: 1rem">
+            <span class="section-badge">Complete Node.js & Express + AI Tools</span>
+          </div>
           <h1 class="display-4 fw-bold mb-3">
             Node.js Training – Master <span class="gradient-text">Backend Development</span> with AI
           </h1>
-          <p class="lead text-muted mb-0">
+          <p class="lead text-muted mb-4">
             Build scalable REST APIs and backend services with AI-powered development. Learn Express.js, middleware, authentication, database integration, and production deployment faster with intelligent code assistance.
           </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a routerLink="/contact" class="btn btn-primary btn-lg">
+              Start Learning
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#curriculum" class="btn btn-outline-primary btn-lg">View Curriculum</a>
+          </div>
         </div>
         <div class="col-lg-4 text-center">
-          <div class="header-icon">🔌</div>
+          <div class="header-icon-wrap">
+            <div class="icon-box icon-box-xl icon-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <div class="container pb-5">
+
+    <!-- Quick Stats -->
+    <section class="mb-5">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <div class="stat-card glass p-3 rounded-3">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Modules</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card glass p-3 rounded-3">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Hands-on Labs</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card glass p-3 rounded-3">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Interview Q&A</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card glass p-3 rounded-3">
+            <div class="stat-number">v22</div>
+            <div class="stat-label">Latest Node.js</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Why Node.js Section -->
     <section class="mb-5">
       <div class="why-card glass p-4 rounded-3">
         <div class="d-flex gap-3 align-items-start">
-          <div class="icon">⚙️</div>
+          <div class="icon-box icon-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
           <div>
             <h2 class="h4 fw-bold mb-2">Why Node.js + AI Development?</h2>
             <p class="text-muted mb-0">
-              Node.js brings JavaScript to the server, enabling full-stack development with a single language. Fast V8 engine, non-blocking I/O, huge ecosystem (npm), and massive job demand make it perfect for modern backends. Learn to leverage AI tools for faster API development, debugging, and optimization.
+              Node.js brings JavaScript to the server, enabling full-stack development with a single language. Fast V8 engine, non-blocking I/O, the massive npm ecosystem (2M+ packages), and huge demand across Indian IT companies make it essential for modern backends. AI tools like GitHub Copilot and ChatGPT accelerate API development, debugging, and optimization.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prerequisites -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">Prerequisites</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="prereq-card glass p-3 rounded-3 h-100">
+            <div class="icon-box icon-box-sm icon-success mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 class="h6 fw-bold mb-1">JavaScript (ES6+)</h3>
+            <p class="small text-muted mb-0">Arrow functions, async/await, destructuring, modules</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="prereq-card glass p-3 rounded-3 h-100">
+            <div class="icon-box icon-box-sm icon-success mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Command Line Basics</h3>
+            <p class="small text-muted mb-0">Terminal navigation, npm commands, file operations</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="prereq-card glass p-3 rounded-3 h-100">
+            <div class="icon-box icon-box-sm icon-success mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 class="h6 fw-bold mb-1">HTTP Fundamentals</h3>
+            <p class="small text-muted mb-0">Request/response, status codes, headers (we cover this too)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Curriculum -->
+    <section class="mb-5" id="curriculum">
+      <h2 class="h3 fw-bold mb-4">Comprehensive Curriculum</h2>
+      <div class="curriculum-timeline">
+        <div class="curriculum-item" *ngFor="let mod of curriculum; let i = index">
+          <div class="curriculum-number">{{ i + 1 }}</div>
+          <div class="curriculum-content">
+            <h3 class="h6 fw-bold mb-1">{{ mod.title }}</h3>
+            <p class="small text-muted mb-2">{{ mod.description }}</p>
+            <div class="curriculum-topics">
+              <span class="topic-badge" *ngFor="let topic of mod.topics">{{ topic }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -39,46 +137,80 @@
     <section class="mb-5">
       <h2 class="h3 fw-bold mb-4">Essential Node.js Concepts</h2>
       <div class="row g-3">
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <div class="concept-card card h-100">
             <div class="card-body">
-              <div class="concept-icon">🚀</div>
-              <h3 class="h6 fw-bold mb-2">Node.js & Runtime</h3>
+              <div class="icon-box icon-primary mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Node.js Runtime</h3>
               <p class="small text-muted mb-0">
-                JavaScript runtime on Chrome's V8 engine. Enables running JS outside browsers with file system, OS, and networking access.
+                JavaScript runtime on Chrome's V8 engine. Non-blocking I/O, event-driven architecture for high-performance servers.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <div class="concept-card card h-100">
             <div class="card-body">
-              <div class="concept-icon">📦</div>
+              <div class="icon-box icon-purple mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
               <h3 class="h6 fw-bold mb-2">NPM & Package Management</h3>
               <p class="small text-muted mb-0">
-                Node Package Manager for installing, managing, and sharing packages. Lock files for reproducible builds.
+                2M+ packages in npm registry. Lock files for reproducible builds. Semantic versioning and dependency management.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <div class="concept-card card h-100">
             <div class="card-body">
-              <div class="concept-icon">🛣️</div>
+              <div class="icon-box icon-warning mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              </div>
               <h3 class="h6 fw-bold mb-2">Express.js Framework</h3>
               <p class="small text-muted mb-0">
-                Minimal web framework for routing, middleware, template engines, and building RESTful APIs quickly.
+                Minimal web framework for routing, middleware chains, template engines, and building RESTful APIs rapidly.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <div class="concept-card card h-100">
             <div class="card-body">
-              <div class="concept-icon">📡</div>
+              <div class="icon-box icon-info mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
               <h3 class="h6 fw-bold mb-2">REST APIs & HTTP</h3>
               <p class="small text-muted mb-0">
-                Build stateless APIs using HTTP verbs (GET, POST, PUT, DELETE). Handle requests, responses, and status codes.
+                Build stateless APIs using HTTP verbs (GET, POST, PUT, DELETE). Request validation, response formatting, and HATEOAS.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="icon-box icon-rose mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Authentication & JWT</h3>
+              <p class="small text-muted mb-0">
+                Implement secure auth with JWT tokens, bcrypt password hashing, refresh tokens, and OAuth2 integration.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="concept-card card h-100">
+            <div class="card-body">
+              <div class="icon-box icon-teal mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Database Integration</h3>
+              <p class="small text-muted mb-0">
+                Connect to MongoDB with Mongoose, PostgreSQL with Prisma, Redis for caching, and implement data access patterns.
               </p>
             </div>
           </div>
@@ -89,8 +221,43 @@
     <!-- Interactive Playground -->
     <section class="mb-5">
       <h2 class="h3 fw-bold mb-4">Try It Out – Interactive Playground</h2>
+      <p class="text-muted mb-3">Run Node.js code directly in your browser — experiment with APIs and async patterns.</p>
       <div class="playground-wrapper rounded-3 overflow-hidden shadow-lg">
         <app-playground kind="node"></app-playground>
+      </div>
+    </section>
+
+    <!-- What You'll Build -->
+    <section class="mb-5">
+      <h2 class="h3 fw-bold mb-4">What You'll Build</h2>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="build-card glass p-4 rounded-3 h-100">
+            <div class="icon-box icon-primary mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="h6 fw-bold mb-2">RESTful API Server</h3>
+            <p class="small text-muted mb-0">CRUD endpoints, validation, error handling, pagination, and filtering</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="build-card glass p-4 rounded-3 h-100">
+            <div class="icon-box icon-purple mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+            </div>
+            <h3 class="h6 fw-bold mb-2">Auth Microservice</h3>
+            <p class="small text-muted mb-0">JWT login, registration, password reset, role-based access control</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="build-card glass p-4 rounded-3 h-100">
+            <div class="icon-box icon-info mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="h6 fw-bold mb-2">Real-time Dashboard API</h3>
+            <p class="small text-muted mb-0">WebSocket events, streaming data, rate limiting, and caching layer</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -99,54 +266,56 @@
       <h2 class="h3 fw-bold mb-4">Common Errors & Quick Fixes</h2>
       <div class="row g-3">
         <div class="col-lg-6">
-          <div class="error-card card h-100 border-danger">
+          <div class="error-card card h-100">
             <div class="card-body">
-              <h4 class="h6 fw-bold text-danger mb-2">❌ Cannot Find Module</h4>
-              <p class="small mb-2">
-                <strong>Cause:</strong> Package not installed or wrong import path
-              </p>
-              <p class="small text-muted">
-                <strong>Fix:</strong> Run `npm install package-name` or check the import path.
-              </p>
+              <h4 class="h6 fw-bold text-danger mb-2">Cannot Find Module</h4>
+              <p class="small mb-2"><strong>Cause:</strong> Package not installed or wrong import path</p>
+              <p class="small text-muted"><strong>Fix:</strong> Run <code>npm install package-name</code> or verify the import path and file extension.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="error-card card h-100 border-danger">
+          <div class="error-card card h-100">
             <div class="card-body">
-              <h4 class="h6 fw-bold text-danger mb-2">❌ Port Already in Use</h4>
-              <p class="small mb-2">
-                <strong>Cause:</strong> Another process is using the port
-              </p>
-              <p class="small text-muted">
-                <strong>Fix:</strong> Use a different port or kill the existing process.
-              </p>
+              <h4 class="h6 fw-bold text-danger mb-2">EADDRINUSE: Port Already in Use</h4>
+              <p class="small mb-2"><strong>Cause:</strong> Another process is using the port</p>
+              <p class="small text-muted"><strong>Fix:</strong> Kill the existing process or use a different port via environment variable.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="error-card card h-100 border-danger">
+          <div class="error-card card h-100">
             <div class="card-body">
-              <h4 class="h6 fw-bold text-danger mb-2">❌ CORS Errors</h4>
-              <p class="small mb-2">
-                <strong>Cause:</strong> Cross-origin requests blocked
-              </p>
-              <p class="small text-muted">
-                <strong>Fix:</strong> Install and use `cors` middleware to enable cross-origin requests.
-              </p>
+              <h4 class="h6 fw-bold text-danger mb-2">CORS Policy Error</h4>
+              <p class="small mb-2"><strong>Cause:</strong> Cross-origin request blocked by browser</p>
+              <p class="small text-muted"><strong>Fix:</strong> Install and configure the <code>cors</code> middleware with proper origin whitelist.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="error-card card h-100 border-danger">
+          <div class="error-card card h-100">
             <div class="card-body">
-              <h4 class="h6 fw-bold text-danger mb-2">❌ Connection Refused</h4>
-              <p class="small mb-2">
-                <strong>Cause:</strong> Database or service not running
-              </p>
-              <p class="small text-muted">
-                <strong>Fix:</strong> Ensure MongoDB/database is running and connection string is correct.
-              </p>
+              <h4 class="h6 fw-bold text-danger mb-2">UnhandledPromiseRejection</h4>
+              <p class="small mb-2"><strong>Cause:</strong> Async error not caught</p>
+              <p class="small text-muted"><strong>Fix:</strong> Always use try/catch with async/await or .catch() with promises. Add global error handler.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">ECONNREFUSED</h4>
+              <p class="small mb-2"><strong>Cause:</strong> Database or external service not running</p>
+              <p class="small text-muted"><strong>Fix:</strong> Verify connection string, check if MongoDB/Redis is running and IP is whitelisted.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="error-card card h-100">
+            <div class="card-body">
+              <h4 class="h6 fw-bold text-danger mb-2">ERR_HTTP_HEADERS_SENT</h4>
+              <p class="small mb-2"><strong>Cause:</strong> Sending response after headers already sent</p>
+              <p class="small text-muted"><strong>Fix:</strong> Add <code>return</code> after res.send/json/redirect to prevent further execution.</p>
             </div>
           </div>
         </div>
@@ -155,7 +324,8 @@
 
     <!-- Interview Questions -->
     <section class="mb-5">
-      <h2 class="h3 fw-bold mb-4">Node.js Interview Questions</h2>
+      <h2 class="h3 fw-bold mb-4">Node.js Interview Questions (Top 15+)</h2>
+      <p class="text-muted mb-3">Frequently asked in TCS, Infosys, Wipro, Accenture, and startup interviews.</p>
       <div class="accordion" id="nodeFAQ">
         <div class="accordion-item" *ngFor="let q of questions; let i = index">
           <h2 class="accordion-header">
@@ -172,44 +342,64 @@
       </div>
     </section>
 
-    <!-- Video Tutorials - COMMENTED OUT: Videos coming soon -->
-    <!-- 
+    <!-- Career Paths -->
     <section class="mb-5">
-      <h2 class="h3 fw-bold mb-4">Video Tutorials</h2>
-      <div class="row g-4">
-        <div class="col-lg-6" *ngFor="let v of videos">
-          <div class="video-card card h-100">
-            <div class="ratio ratio-16x9 rounded-top overflow-hidden">
-              <iframe [src]="('https://www.youtube.com/embed/' + v.id) | safeUrl" [title]="v.title" allowfullscreen></iframe>
+      <h2 class="h3 fw-bold mb-4">Career Paths After Node.js Mastery</h2>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="career-card glass p-3 rounded-3 text-center h-100">
+            <div class="icon-box icon-box-sm icon-primary mb-2 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
             </div>
-            <div class="card-body">
-              <h4 class="card-title fw-semibold">{{ v.title }}</h4>
-              <p class="card-text small text-muted">{{ v.description }}</p>
+            <h3 class="h6 fw-bold mb-1">Backend Developer</h3>
+            <p class="small text-muted mb-0">₹5-15 LPA</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="career-card glass p-3 rounded-3 text-center h-100">
+            <div class="icon-box icon-box-sm icon-purple mb-2 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
             </div>
+            <h3 class="h6 fw-bold mb-1">API Architect</h3>
+            <p class="small text-muted mb-0">₹15-30 LPA</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="career-card glass p-3 rounded-3 text-center h-100">
+            <div class="icon-box icon-box-sm icon-info mb-2 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3 class="h6 fw-bold mb-1">DevOps Engineer</h3>
+            <p class="small text-muted mb-0">₹10-25 LPA</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="career-card glass p-3 rounded-3 text-center h-100">
+            <div class="icon-box icon-box-sm icon-teal mb-2 mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Full-Stack Engineer</h3>
+            <p class="small text-muted mb-0">₹10-30 LPA</p>
           </div>
         </div>
       </div>
     </section>
-    -->
 
     <!-- CTA Section -->
     <section class="cta-section py-5 rounded-4 mb-5">
       <div class="container text-center">
         <h2 class="h3 fw-bold mb-3">Build Scalable Backend APIs</h2>
         <p class="lead text-muted mb-4">
-          Learn Node.js, Express, REST APIs, authentication, and database integration in our comprehensive program.
+          Master Node.js, Express, REST APIs, authentication, and database integration with AI-assisted development.
         </p>
-        <a routerLink="/contact" class="btn btn-primary btn-lg"><span class="me-2">🚀</span>Join MEAN Stack Training</a>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a routerLink="/contact" class="btn btn-primary btn-lg">
+            Start Your Upgrade
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a routerLink="/resources" class="btn btn-outline-primary btn-lg">View Full Roadmap</a>
+        </div>
       </div>
     </section>
-
-    <!-- Resource Links - COMMENTED OUT: YouTube channel coming soon -->
-    <!-- 
-    <div class="resource-links">
-      <a href="https://youtube.com" target="_blank" class="btn btn-outline-primary">
-        <span class="me-2">▶️</span>Watch More Videos
-      </a>
-    </div>
-    -->
   </div>
 </div>

@@ -4,16 +4,18 @@
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-8">
-          <span class="badge bg-gradient-primary text-white mb-3 px-4 py-2">📚 Complete Learning Path + AI Tools</span>
+          <div class="section-heading"><span class="section-badge">Complete Learning Path + AI Tools</span></div>
           <h1 class="display-3 fw-bold mb-3">
             Resources & <span class="gradient-text">Roadmap</span>
           </h1>
           <p class="lead text-muted mb-0">
-            Curated links and a practical path to become an AI-ready MEAN stack developer. Master full-stack development with modern AI-powered tools and workflows.
+            Curated resources, learning roadmaps, and project ideas to accelerate your developer journey. Everything you need to become an AI-ready full-stack developer.
           </p>
         </div>
         <div class="col-lg-4 text-center">
-          <div class="hero-icon">🗺️</div>
+          <div class="hero-icon-wrap">
+            <span class="icon-box icon-box-xl icon-primary"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span>
+          </div>
         </div>
       </div>
     </div>
@@ -26,9 +28,9 @@
         <div class="resource-card roadmap-card h-100">
           <div class="card-header-modern">
             <div class="d-flex align-items-center gap-3">
-              <div class="card-icon">🎯</div>
+              <span class="icon-box icon-box-sm icon-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></span>
               <div>
-                <h2 class="h4 fw-bold mb-1">Learning Roadmap</h2>
+                <h2 class="h4 fw-bold mb-1">Full-Stack Learning Roadmap</h2>
                 <p class="text-muted small mb-0">Follow this path to mastery</p>
               </div>
             </div>
@@ -37,12 +39,14 @@
             <ol class="roadmap-list mb-0">
               <li><span class="step-number">1</span><span class="step-content">Web basics: HTML5, CSS3, JavaScript (ES6+)</span></li>
               <li><span class="step-number">2</span><span class="step-content">TypeScript fundamentals & type system</span></li>
-              <li><span class="step-number">3</span><span class="step-content">Angular: components, routing, forms, HTTP</span></li>
+              <li><span class="step-number">3</span><span class="step-content">Angular: components, signals, routing, forms, HTTP</span></li>
               <li><span class="step-number">4</span><span class="step-content">Node.js + Express: REST APIs & middleware</span></li>
-              <li><span class="step-number">5</span><span class="step-content">MongoDB + Mongoose: data modeling</span></li>
-              <li><span class="step-number">6</span><span class="step-content">Authentication, guards, JWT security</span></li>
-              <li><span class="step-number">7</span><span class="step-content">AI-powered development: ChatGPT, GitHub Copilot, code assistants</span></li>
-              <li><span class="step-number">8</span><span class="step-content">Deployment: Docker, cloud basics (AWS/Azure)</span></li>
+              <li><span class="step-number">5</span><span class="step-content">MongoDB + Mongoose: schema design & aggregation</span></li>
+              <li><span class="step-number">6</span><span class="step-content">Authentication: JWT, OAuth, guards & interceptors</span></li>
+              <li><span class="step-number">7</span><span class="step-content">Testing: Unit, integration & E2E with Jasmine/Jest</span></li>
+              <li><span class="step-number">8</span><span class="step-content">AI-powered dev: GitHub Copilot, ChatGPT, Claude</span></li>
+              <li><span class="step-number">9</span><span class="step-content">DevOps: Docker, CI/CD, cloud deployment (AWS/Azure)</span></li>
+              <li><span class="step-number">10</span><span class="step-content">System design & architecture patterns</span></li>
             </ol>
           </div>
         </div>
@@ -52,10 +56,10 @@
         <div class="resource-card links-card h-100">
           <div class="card-header-modern">
             <div class="d-flex align-items-center gap-3">
-              <div class="card-icon">🔗</div>
+              <span class="icon-box icon-box-sm icon-info"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
               <div>
-                <h2 class="h4 fw-bold mb-1">Useful Links</h2>
-                <p class="text-muted small mb-0">Official documentation</p>
+                <h2 class="h4 fw-bold mb-1">Official Documentation</h2>
+                <p class="text-muted small mb-0">Go-to references for every technology</p>
               </div>
             </div>
           </div>
@@ -63,36 +67,50 @@
             <ul class="links-list mb-0">
               <li>
                 <a href="https://angular.dev" target="_blank" rel="noopener" class="link-item">
-                  <span class="link-icon">⚡</span>
-                  <span class="link-text">Angular Docs</span>
+                  <span class="link-icon"><span class="icon-box icon-box-sm icon-primary" style="width:28px;height:28px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span></span>
+                  <span class="link-text">Angular Docs (angular.dev)</span>
                   <span class="link-arrow">→</span>
                 </a>
               </li>
               <li>
                 <a href="https://nodejs.org/en/docs" target="_blank" rel="noopener" class="link-item">
-                  <span class="link-icon">🟢</span>
-                  <span class="link-text">Node.js Docs</span>
+                  <span class="link-icon"><span class="icon-box icon-box-sm icon-success" style="width:28px;height:28px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span></span>
+                  <span class="link-text">Node.js Documentation</span>
                   <span class="link-arrow">→</span>
                 </a>
               </li>
               <li>
                 <a href="https://expressjs.com/" target="_blank" rel="noopener" class="link-item">
-                  <span class="link-icon">🚀</span>
-                  <span class="link-text">Express Docs</span>
+                  <span class="link-icon"><span class="icon-box icon-box-sm icon-purple" style="width:28px;height:28px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span></span>
+                  <span class="link-text">Express.js Guide</span>
                   <span class="link-arrow">→</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.mongodb.com/docs/" target="_blank" rel="noopener" class="link-item">
-                  <span class="link-icon">🍃</span>
-                  <span class="link-text">MongoDB Docs</span>
+                  <span class="link-icon"><span class="icon-box icon-box-sm icon-teal" style="width:28px;height:28px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span></span>
+                  <span class="link-text">MongoDB Manual</span>
                   <span class="link-arrow">→</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener" class="link-item">
-                  <span class="link-icon">📘</span>
-                  <span class="link-text">TypeScript Docs</span>
+                  <span class="link-icon"><span class="icon-box icon-box-sm icon-info" style="width:28px;height:28px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span></span>
+                  <span class="link-text">TypeScript Handbook</span>
+                  <span class="link-arrow">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://mongoosejs.com/docs/" target="_blank" rel="noopener" class="link-item">
+                  <span class="link-icon"><span class="icon-box icon-box-sm icon-warning" style="width:28px;height:28px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span></span>
+                  <span class="link-text">Mongoose ODM Docs</span>
+                  <span class="link-arrow">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://rxjs.dev/" target="_blank" rel="noopener" class="link-item">
+                  <span class="link-icon"><span class="icon-box icon-box-sm icon-rose" style="width:28px;height:28px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span></span>
+                  <span class="link-text">RxJS Reference</span>
                   <span class="link-arrow">→</span>
                 </a>
               </li>
@@ -102,17 +120,90 @@
       </div>
     </div>
 
+    <!-- AI Tools Section -->
     <section class="mt-5">
       <div class="section-header mb-4">
-        <h2 class="h3 fw-bold mb-2">🚀 Project Ideas</h2>
-        <p class="text-muted">Build these projects to strengthen your skills</p>
+        <h2 class="h3 fw-bold mb-2">AI Development Tools</h2>
+        <p class="text-muted">Modern tools that 10x your productivity</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="tool-card text-center p-4 rounded-3">
+            <span class="icon-box icon-box-sm icon-purple"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 3.5 2.5 6.5 6 7v3h2v-3c3.5-.5 6-3.5 6-7a7 7 0 0 0-7-7z"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/></svg></span>
+            <h3 class="h6 fw-bold mb-2">GitHub Copilot</h3>
+            <p class="small text-muted mb-0">AI pair programmer that suggests code in real-time inside VS Code</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="tool-card text-center p-4 rounded-3">
+            <span class="icon-box icon-box-sm icon-info"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <h3 class="h6 fw-bold mb-2">ChatGPT / Claude</h3>
+            <p class="small text-muted mb-0">Debug errors, generate code snippets, explain complex concepts</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="tool-card text-center p-4 rounded-3">
+            <span class="icon-box icon-box-sm icon-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <h3 class="h6 fw-bold mb-2">Cursor IDE</h3>
+            <p class="small text-muted mb-0">AI-native code editor with built-in chat and code generation</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="tool-card text-center p-4 rounded-3">
+            <span class="icon-box icon-box-sm icon-warning"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <h3 class="h6 fw-bold mb-2">Postman AI</h3>
+            <p class="small text-muted mb-0">AI-assisted API testing, documentation, and workflow automation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cheatsheets Section -->
+    <section class="mt-5">
+      <div class="section-header mb-4">
+        <h2 class="h3 fw-bold mb-2">Quick Reference Cheatsheets</h2>
+        <p class="text-muted">Bookmark these for daily use</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cheatsheet-card p-3 rounded-3">
+            <h4 class="h6 fw-bold mb-2">Angular CLI Commands</h4>
+            <code class="d-block small mb-1">ng new / ng generate / ng serve</code>
+            <code class="d-block small mb-1">ng build --configuration production</code>
+            <code class="d-block small">ng test / ng e2e / ng lint</code>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cheatsheet-card p-3 rounded-3">
+            <h4 class="h6 fw-bold mb-2">MongoDB Shell Commands</h4>
+            <code class="d-block small mb-1">db.collection.find() / insertOne()</code>
+            <code class="d-block small mb-1">db.collection.aggregate([...])</code>
+            <code class="d-block small">db.collection.createIndex()</code>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="cheatsheet-card p-3 rounded-3">
+            <h4 class="h6 fw-bold mb-2">Git Essentials</h4>
+            <code class="d-block small mb-1">git clone / branch / checkout -b</code>
+            <code class="d-block small mb-1">git add . / commit -m / push</code>
+            <code class="d-block small">git merge / rebase / stash</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Ideas -->
+    <section class="mt-5">
+      <div class="section-header mb-4">
+        <h2 class="h3 fw-bold mb-2">Project Ideas</h2>
+        <p class="text-muted">Build these projects to strengthen your portfolio</p>
       </div>
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="project-card">
             <div class="project-number">01</div>
             <h3 class="project-title">Task Manager</h3>
-            <p class="project-desc">Full-stack CRUD app with Angular + Node.js + MongoDB</p>
+            <p class="project-desc">Full-stack CRUD app with drag-and-drop, authentication, and real-time updates</p>
             <div class="project-tech">
               <span class="tech-badge">Angular</span>
               <span class="tech-badge">Node.js</span>
@@ -123,12 +214,12 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="project-card">
             <div class="project-number">02</div>
-            <h3 class="project-title">Course Catalog</h3>
-            <p class="project-desc">Complete CRUD operations with search and filtering</p>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-desc">Product catalog, cart, checkout, payment integration, and admin dashboard</p>
             <div class="project-tech">
-              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Angular</span>
               <span class="tech-badge">Express</span>
-              <span class="tech-badge">Mongoose</span>
+              <span class="tech-badge">Stripe</span>
             </div>
           </div>
         </div>
@@ -136,13 +227,65 @@
           <div class="project-card">
             <div class="project-number">03</div>
             <h3 class="project-title">REST API with Auth</h3>
-            <p class="project-desc">Secure API with JWT authentication and guards</p>
+            <p class="project-desc">Secure API with JWT, role-based access, rate limiting, and Swagger docs</p>
             <div class="project-tech">
               <span class="tech-badge">JWT</span>
               <span class="tech-badge">Guards</span>
+              <span class="tech-badge">Swagger</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-number">04</div>
+            <h3 class="project-title">Real-time Chat App</h3>
+            <p class="project-desc">WebSocket-based messaging with rooms, typing indicators, and file sharing</p>
+            <div class="project-tech">
+              <span class="tech-badge">Socket.io</span>
+              <span class="tech-badge">Angular</span>
+              <span class="tech-badge">Node.js</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-number">05</div>
+            <h3 class="project-title">Blog Platform</h3>
+            <p class="project-desc">Rich text editor, categories, comments, user profiles, and SEO optimization</p>
+            <div class="project-tech">
+              <span class="tech-badge">Mongoose</span>
+              <span class="tech-badge">Angular SSR</span>
               <span class="tech-badge">Auth</span>
             </div>
           </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-number">06</div>
+            <h3 class="project-title">Analytics Dashboard</h3>
+            <p class="project-desc">Data visualization with charts, aggregation pipelines, and export to CSV/PDF</p>
+            <div class="project-tech">
+              <span class="tech-badge">Chart.js</span>
+              <span class="tech-badge">Aggregation</span>
+              <span class="tech-badge">API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="mt-5">
+      <div class="cta-section rounded-4 p-5 text-center">
+        <h2 class="h3 fw-bold">Join the Dev2080 Community</h2>
+        <p class="lead text-muted">Connect with fellow developers, share projects, and get help from mentors</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a routerLink="/contact" class="btn btn-primary btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="me-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Start Your Upgrade
+          </a>
+          <a href="https://wa.me/919778177995" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="me-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Join WhatsApp Group
+          </a>
         </div>
       </div>
     </section>

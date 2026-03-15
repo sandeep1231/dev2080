@@ -1,7 +1,6 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ChangeDetectorRef, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { VideoService } from '../../services/video.service';
 import { SeoService } from '../../services/seo.service';
 
 @Component({
@@ -11,43 +10,29 @@ import { SeoService } from '../../services/seo.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
-  // Featured videos disabled - will be enabled when videos are ready
-  // featured: ReturnType<VideoService['getFeatured']> = [];
-  
+  activeTab = signal<'with' | 'without'>('with');
   displayLines: string[] = ['', '', '', '', '', ''];
   currentLine = 0;
   private codeLines = [
-    '// Build amazing AI-Powered full-stack apps',
-    'const app = new MEANStack();',
-    'app.learn(\'Angular\')',
-    '  .with(\'Node.js\')',
-    '  .useDatabase(\'MongoDB\');',
-    'await app.deploy();'
+    '// AI-Powered Development Workflow',
+    'const engineer = new Dev2080();',
+    'engineer.useAI(\'copilot\', \'chatgpt\');',
+    '  .buildProject(\'enterprise-saas\')',
+    '  .deployTo(\'production\')',
+    '> Career upgraded! 🚀'
   ];
   private currentChar = 0;
   private typingInterval: any;
-  
-  curriculumItems = [
-    'Web Basics',
-    'Angular Fundamentals',
-    'API Development with Node',
-    'Database with MongoDB',
-    'Full-Stack Mini Project',
-    'Interview Preparation'
-  ];
 
   constructor(
-    private videoService: VideoService, 
     private seo: SeoService,
     private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
-    // Video service commented out - enable when videos are ready
-    // this.featured = this.videoService.getFeatured();
     this.seo.set(
-      'MEAN Stack + AI-Powered Development Training – Angular Node.js MongoDB', 
-      'Learn MEAN Stack with AI-powered development tools. Master Angular, Node.js, MongoDB with ChatGPT and AI coding assistants. Interview preparation and real projects included.'
+      'Dev2080 — Master the 20% That Delivers 80% of Results', 
+      'Master the 20% of tech skills that deliver 80% of career results. Angular, Node.js, MongoDB with AI-powered workflows. Live cohort training by a senior consultant with 10+ years experience.'
     );
   }
 
@@ -90,11 +75,6 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
         }, pauseAtEnd);
       }
     }, typingSpeed);
-  }
-
-  getIcon(index: number): string {
-    const icons = ['📚', '⚡', '🔌', '🗄️', '🏗️', '💼'];
-    return icons[index] || '✨';
   }
 }
 

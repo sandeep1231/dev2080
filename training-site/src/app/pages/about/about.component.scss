@@ -1,0 +1,148 @@
+/* About Page Styles */
+
+.section-label {
+	display: inline-block;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #6366f1;
+	margin-bottom: 0.75rem;
+}
+
+.avatar-large {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #6366f1, #8b5cf6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	box-shadow: 0 20px 60px rgba(99, 102, 241, 0.35);
+
+	span {
+		font-size: 4.5rem;
+		font-weight: 800;
+		color: white;
+		letter-spacing: -0.03em;
+	}
+}
+
+.expertise-card {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 1rem;
+	padding: 1.75rem;
+	height: 100%;
+	transition: all 0.3s ease;
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+		border-color: rgba(99, 102, 241, 0.2);
+	}
+
+	.expertise-icon {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.diff-item {
+	display: flex;
+	gap: 1rem;
+	padding: 1.25rem 0;
+	border-bottom: 1px solid #f1f5f9;
+
+	&:last-child { border-bottom: none; }
+
+	.diff-number {
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: #6366f1;
+		flex-shrink: 0;
+		opacity: 0.4;
+		letter-spacing: -0.03em;
+		line-height: 1.4;
+	}
+}
+
+.stats-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+
+	.stat-box {
+		background: #f8fafc;
+		border: 1px solid #e2e8f0;
+		border-radius: 1rem;
+		padding: 2rem;
+		text-align: center;
+		transition: all 0.3s ease;
+
+		&:hover {
+			border-color: rgba(99, 102, 241, 0.2);
+			background: #ffffff;
+			transform: translateY(-2px);
+		}
+
+		.stat-value {
+			font-size: 2rem;
+			font-weight: 800;
+			background: linear-gradient(135deg, #6366f1, #8b5cf6);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			letter-spacing: -0.03em;
+		}
+
+		.stat-desc {
+			font-size: 0.85rem;
+			color: #64748b;
+			font-weight: 500;
+			margin-top: 0.25rem;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.avatar-large {
+		width: 160px;
+		height: 160px;
+
+		span { font-size: 3rem; }
+	}
+
+	.stats-grid {
+		gap: 1rem;
+
+		.stat-box {
+			padding: 1.25rem;
+
+			.stat-value { font-size: 1.5rem; }
+		}
+	}
+}
+
+// ─── Dark Mode ───
+:host-context(html.dark) {
+	.expertise-card {
+		background: #1e293b;
+		border-color: #334155;
+	}
+
+	.diff-item {
+		border-bottom-color: #1e293b;
+		color: #cbd5e1;
+	}
+
+	.stats-grid .stat-box {
+		background: #1e293b;
+		border-color: #334155;
+
+		.stat-desc { color: #94a3b8; }
+
+		&:hover { background: #1e293b; }
+	}
+}

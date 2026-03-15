@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,31 +11,39 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent {
   isScrolled = false;
+  showDropdown = signal(false);
+  mobileOpen = false;
+  private dropdownTimer: any = null;
+
+  constructor(public theme: ThemeService) {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.scrollY > 10;
   }
 
-  // Collapse the mobile navbar after a navigation link click.
-  collapseIfOpen() {
-    const nav = document.getElementById('mainNav');
-    if (nav && nav.classList.contains('show')) {
-      const bootstrapGlobal: any = (window as any).bootstrap;
-      if (bootstrapGlobal?.Collapse) {
-        const existing = bootstrapGlobal.Collapse.getInstance(nav);
-        const instance = existing || new bootstrapGlobal.Collapse(nav, { toggle: false });
-        instance.hide();
-      } else {
-        // Fallback: manually remove show class
-        nav.classList.remove('show');
-      }
-    }
+  openDropdown() {
+    clearTimeout(this.dropdownTimer);
+    this.showDropdown.set(true);
   }
 
-  toggleNav() {
-    const nav = document.getElementById('mainNav');
-    if (!nav) return;
-    nav.classList.toggle('show');
+  closeDropdown() {
+    this.dropdownTimer = setTimeout(() => {
+      this.showDropdown.set(false);
+    }, 150);
+  }
+
+  toggleTheme() {
+    this.theme.toggle();
+  }
+
+  toggleMobile() {
+    this.mobileOpen = !this.mobileOpen;
+    document.body.style.overflow = this.mobileOpen ? 'hidden' : '';
+  }
+
+  closeMobile() {
+    this.mobileOpen = false;
+    document.body.style.overflow = '';
   }
 }
